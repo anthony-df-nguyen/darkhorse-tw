@@ -15,48 +15,42 @@ import {
 } from "@heroicons/react/outline";
 import { ChevronDownIcon } from "@heroicons/react/solid";
 
-const solutions = [
+const navigation = [
   {
     name: "Home",
-    href: "#",
+    href: "/",
     icon: HomeIcon,
   },
   {
     name: "Services",
-    href: "#",
+    href: "/services",
     icon: QuestionMarkCircleIcon,
   },
   {
     name: "About",
-    href: "#",
+    href: "/about",
     icon: UserIcon,
   },
   {
     name: "Contact",
-    href: "#",
+    href: "/contactme",
     icon: MailIcon,
   },
-];
-const navigation = [
-  { name: "Home", href: "#" },
-  { name: "Services", href: "#" },
-  { name: "About", href: "#" },
-  { name: "Contact", href: "#" },
 ];
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-export default function Example() {
+export default function Navbar() {
   return (
     <div className="bg-white">
       <header>
         <Popover className="relative bg-white">
-          <div className="flex justify-between items-center max-w-7xl mx-auto px-4 py-6 sm:px-6 md:justify-start md:space-x-10 lg:px-8">
+          <div className="flex justify-between items-center max-w-7xl mx-auto px-4 py-6 sm:px-6 md:space-x-10 lg:px-8">
             <div className="flex justify-start lg:w-0 lg:flex-1">
               <a href="#">
-                <span className="sr-only">Workflow</span>
+                <span className="sr-only">Darkhorse</span>
                 <img
                   className="h-8 w-auto sm:h-10 bg-gray-900 rounded-md"
                   src="images/horse.svg"
@@ -84,7 +78,7 @@ export default function Example() {
                   <Popover.Panel className="absolute z-10 -ml-4 mt-3 transform w-screen max-w-md lg:max-w-2xl lg:ml-0 lg:left-1/2 lg:-translate-x-1/2">
                     <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
                       <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8 lg:grid-cols-2">
-                        {solutions.map((item) => (
+                        {navigation.map((item) => (
                           <a
                             key={item.name}
                             href={item.href}
@@ -97,7 +91,7 @@ export default function Example() {
                               />
                             </div>
                             <div className="ml-4">
-                              <p className="text-base font-medium text-gray-900">
+                              <p className="text-base font-medium text-dark">
                                 {item.name}
                               </p>
                               <p className="mt-1 text-sm text-gray-500">
@@ -122,20 +116,6 @@ export default function Example() {
                 </a>
               ))}
             </Popover.Group>
-            <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
-              <a
-                href="#"
-                className="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900"
-              >
-                Sign in
-              </a>
-              <a
-                href="#"
-                className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-sky-600 hover:bg-sky-700"
-              >
-                Sign up
-              </a>
-            </div>
           </div>
 
           <Transition
@@ -156,9 +136,9 @@ export default function Example() {
                   <div className="flex items-center justify-between">
                     <div>
                       <img
-                        className="h-8 w-auto"
-                        src="https://tailwindui.com/img/logos/workflow-mark-sky-600.svg"
-                        alt="Workflow"
+                        className="h-8 w-auto bg-gray-900 rounded-md"
+                        src="images/horse.svg"
+                        alt="Darkhorse"
                       />
                     </div>
                     <div className="-mr-2">
@@ -170,7 +150,7 @@ export default function Example() {
                   </div>
                   <div className="mt-6">
                     <nav className="grid grid-cols-1 gap-7">
-                      {solutions.map((item) => (
+                      {navigation.map((item) => (
                         <a
                           key={item.name}
                           href={item.href}
@@ -203,34 +183,26 @@ export default function Example() {
                 <div className="absolute inset-0">
                   <img
                     className="h-full w-full object-cover"
-                    src="https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2830&q=80&sat=-100"
+                    src="images/method.jpg"
                     alt="People working on laptops"
                   />
-                  <div className="absolute inset-0 bg-sky-700 mix-blend-multiply" />
+                  <div className="absolute inset-0 bg-sky-200 mix-blend-multiply" />
                 </div>
                 <div className="relative px-4 py-16 sm:px-6 sm:py-24 lg:py-32 lg:px-8">
                   <h1 className="text-center text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
                     <span className="text-white">Darkhorse</span>{" "}
-                    <span className="text-sky-200">Advisor</span>
+                    <span className="text-sky-100">Advisor</span>
                   </h1>
-                  <p className="mt-6 max-w-lg mx-auto text-center text-xl text-sky-200 sm:max-w-3xl">
-                    Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure
-                    qui lorem cupidatat commodo. Elit sunt amet fugiat veniam
-                    occaecat fugiat aliqua.
+                  <p className="mt-6 max-w-lg mx-auto text-center text-xl font-semibold text-white sm:max-w-3xl">
+                    Individualized financial planning and advisory.
                   </p>
                   <div className="mt-10 max-w-sm mx-auto sm:max-w-none sm:flex sm:justify-center">
-                    <div className="space-y-4 sm:space-y-0 sm:mx-auto sm:inline-grid sm:grid-cols-2 sm:gap-5">
+                    <div className="space-y-4 sm:space-y-0 sm:mx-auto sm:inline-grid sm:grid-cols-1 sm:gap-5">
                       <a
                         href="#"
-                        className="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-sky-700 bg-white hover:bg-sky-50 sm:px-8"
+                        className="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm bg-white text-dark hover:bg-sky-50 sm:px-8"
                       >
-                        Get started
-                      </a>
-                      <a
-                        href="#"
-                        className="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-sky-500 bg-opacity-60 hover:bg-opacity-70 sm:px-8"
-                      >
-                        Live demo
+                        Contact Me
                       </a>
                     </div>
                   </div>
@@ -240,53 +212,7 @@ export default function Example() {
           </div>
 
           {/* Logo cloud */}
-          <div className="bg-gray-100">
-            <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
-              <p className="text-center text-sm font-semibold uppercase text-gray-500 tracking-wide">
-                Trusted by over 5 very average small businesses
-              </p>
-              <div className="mt-6 grid grid-cols-2 gap-8 md:grid-cols-6 lg:grid-cols-5">
-                <div className="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
-                  <img
-                    className="h-12"
-                    src="https://tailwindui.com/img/logos/tuple-logo-gray-400.svg"
-                    alt="Tuple"
-                  />
-                </div>
-                <div className="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
-                  <img
-                    className="h-12"
-                    src="https://tailwindui.com/img/logos/mirage-logo-gray-400.svg"
-                    alt="Mirage"
-                  />
-                </div>
-                <div className="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
-                  <img
-                    className="h-12"
-                    src="https://tailwindui.com/img/logos/statickit-logo-gray-400.svg"
-                    alt="StaticKit"
-                  />
-                </div>
-                <div className="col-span-1 flex justify-center md:col-span-2 md:col-start-2 lg:col-span-1">
-                  <img
-                    className="h-12"
-                    src="https://tailwindui.com/img/logos/transistor-logo-gray-400.svg"
-                    alt="Transistor"
-                  />
-                </div>
-                <div className="col-span-2 flex justify-center md:col-span-2 md:col-start-4 lg:col-span-1">
-                  <img
-                    className="h-12"
-                    src="https://tailwindui.com/img/logos/workcation-logo-gray-400.svg"
-                    alt="Workcation"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
-
-        {/* More main page content here... */}
       </main>
     </div>
   );
