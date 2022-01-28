@@ -1,3 +1,4 @@
+import InfoCard from "../components/info-card";
 export default function Header(props) {
   return (
     <div className="bg-gray-100">
@@ -12,6 +13,7 @@ export default function Header(props) {
           <p className="max-w-3xl mt-5 mx-auto text-xl text-standard">
             {props.children}
           </p>
+          <InfoCard></InfoCard>
         </div>
       </div>
     </div>

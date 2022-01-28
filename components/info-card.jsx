@@ -28,8 +28,8 @@ const features = [
 ];
 export default function InfoCard() {
   return (
-    <div className="relative bg-white pad-top">
-      <div className="mx-auto max-w-md px-4 text-center sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl">
+    <div className="relative pad-top">
+      <div className="mx-auto text-center ">
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
           {features.map((feature) => (
             <div key={feature.name} className="pt-6">
