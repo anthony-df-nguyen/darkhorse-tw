@@ -1,6 +1,5 @@
 import Head from "next/head";
 import Navbar from "../components/navbar";
-import styles from "../styles/Home.module.css";
 import Footer from "../components/footer";
 
 export default function (props) {
@@ -25,7 +24,7 @@ export default function (props) {
         </nav>
       </header>
       <main>{props.children}</main>
-      <footer className={styles.footer}>
+      <footer>
         <Footer />
       </footer>
     </div>

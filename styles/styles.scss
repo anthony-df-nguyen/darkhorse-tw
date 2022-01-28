@@ -6,9 +6,10 @@
   @apply hover:text-#{$color}-#{$value};
 }
 
+// Text
 .text-standard {
   @include text-color("gray", 500);
-  & .hover-text {
+  &.hover-text {
     @include hover("gray", 900);
   }
 }
@@ -23,4 +24,21 @@
 
 .text-accent-dark {
   @include text-color("sky", 700);
+}
+
+// Padding
+@mixin pad-top($value) {
+  @apply pt-#{$value};
+}
+
+@mixin pad-tb($value) {
+  @apply py-#{$value};
+}
+
+.pad-top {
+  @include pad-top(16);
+}
+
+.pad-tb {
+  @include pad-tb(16);
 }

@@ -33,7 +33,7 @@ const navigation = [
   },
   {
     name: "Contact",
-    href: "/contactme",
+    href: "/contact",
     icon: MailIcon,
   },
 ];
