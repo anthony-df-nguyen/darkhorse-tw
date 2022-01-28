@@ -22,7 +22,7 @@ const features = [
   {
     name: "Integrity",
     description:
-      "DHA serves its clients’ needs first and foremost by acting as an independent fiduciary advisor. DHA has no affiliation with any products or service companies including wholesalers or retail brokerages. Because of this, DHA has no conflict of interest and does not receive any commission fees which assures DHA advice will always be centered on what is best for the client. All client fee arrangements are modest and transparent. The fee is based on the value of the account(s) under management.",
+      "As an independent fiduciary advisor, DHA has no affiliation with any products or service companies including wholesalers or retail brokerages. DHA has no conflicts of interest and does not receive any commission fees, assuring that advice is always centered on what is best for the client. All client fee arrangements are modest and transparent, based on the value of the account(s) under management.",
     icon: LightningBoltIcon,
   },
 ];
@@ -30,13 +30,13 @@ export default function InfoCard() {
   return (
     <div className="relative bg-white pad-top">
       <div className="mx-auto max-w-md px-4 text-center sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl">
-        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
           {features.map((feature) => (
             <div key={feature.name} className="pt-6">
-              <div className="flow-root bg-gray-50 rounded-lg px-6 pb-8">
+              <div className="flow-root bg-gray-50 rounded-lg px-6 pb-8 h-full">
                 <div className="-mt-6">
                   <div>
-                    <span className="inline-flex items-center justify-center p-3 bg-sky-600 rounded-md shadow-lg">
+                    <span className="inline-flex items-center justify-center p-3 bg-accent rounded-md shadow-lg">
                       <feature.icon
                         className="h-6 w-6 text-white"
                         aria-hidden="true"

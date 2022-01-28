@@ -22,7 +22,7 @@ export default function Home() {
         <div className="mt-6">
           <a
             href="#"
-            className="sm:inline flex justify-center items-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm bg-sky-600 text-white hover:bg-sky-700 sm:px-8"
+            className="sm:inline flex justify-center items-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm bg-accent text-white  sm:px-8"
           >
             Services
           </a>
