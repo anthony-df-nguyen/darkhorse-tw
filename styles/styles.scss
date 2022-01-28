@@ -7,7 +7,7 @@
 }
 
 // Text
-.text-standard {
+.text-gray {
   @include text-color("gray", 500);
   &.hover-text {
     @include hover("gray", 900);
