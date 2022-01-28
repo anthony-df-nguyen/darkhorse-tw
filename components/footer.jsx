@@ -43,7 +43,7 @@ const navigation = {
   ],
 };
 
-export default function Example() {
+export default function Footer() {
   return (
     <footer className="bg-white">
       <div className="max-w-7xl mx-auto pad-tb px-4 overflow-hidden sm:px-6 lg:px-8">
