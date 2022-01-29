@@ -19,16 +19,16 @@
 }
 
 .text-accent {
-  @include text-color("emerald", 600);
+  @include text-color("emerald", 500);
 }
 
 .text-accent-dark {
-  @include text-color("emerald", 700);
+  @include text-color("emerald", 600);
 }
 
 //Background Color
 .bg-accent {
-  @apply bg-emerald-600;
+  @apply bg-emerald-500;
 }
 
 // Padding

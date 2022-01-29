@@ -28,7 +28,7 @@ const features = [
 ];
 export default function InfoCard() {
   return (
-    <div className="relative pad-top">
+    <div className="max-w-7xl mx-auto relative pad-top">
       <div className="mx-auto text-center ">
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
           {features.map((feature) => (

@@ -76,7 +76,8 @@ export default function Navbar() {
                   enterTo="opacity-100 translate-y-0"
                   leave="transition ease-in duration-150"
                   leaveFrom="opacity-100 translate-y-0"
-                  leaveTo="opacity-0 translate-y-1">
+                  leaveTo="opacity-0 translate-y-1"
+                >
                   <Popover.Panel className="absolute z-10 -ml-4 mt-3 transform w-screen max-w-md lg:max-w-2xl lg:ml-0 lg:left-1/2 lg:-translate-x-1/2">
                     <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
                       <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8 lg:grid-cols-2">
@@ -84,7 +85,8 @@ export default function Navbar() {
                           <a
                             key={item.name}
                             href={item.href}
-                            className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50">
+                            className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
+                          >
                             <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-sky-600 text-white sm:h-12 sm:w-12">
                               <item.icon
                                 className="h-6 w-6"
@@ -111,7 +113,8 @@ export default function Navbar() {
                 <a
                   key={item.name}
                   href={item.href}
-                  className="text-base font-medium text-gray-500 hover:text-gray-900">
+                  className="text-base font-medium text-gray-500 hover:text-gray-900"
+                >
                   {item.name}
                 </a>
               ))}
@@ -125,10 +128,12 @@ export default function Navbar() {
             enterTo="opacity-100 scale-100"
             leave="duration-100 ease-in"
             leaveFrom="opacity-100 scale-100"
-            leaveTo="opacity-0 scale-95">
+            leaveTo="opacity-0 scale-95"
+          >
             <Popover.Panel
               focus
-              className="absolute z-30 top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden">
+              className="absolute z-30 top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden"
+            >
               <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50">
                 <div className="pt-5 pb-6 px-5">
                   <div className="flex items-center justify-between">
@@ -152,7 +157,8 @@ export default function Navbar() {
                         <a
                           key={item.name}
                           href={item.href}
-                          className="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50">
+                          className="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50"
+                        >
                           <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-sky-600 text-white">
                             <item.icon className="h-6 w-6" aria-hidden="true" />
                           </div>
@@ -173,7 +179,7 @@ export default function Navbar() {
       <main>
         <div>
           {/* Hero card */}
-          <div className="relative pad-top">
+          <div className="relative pt-4 pb-16">
             <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gray-100" />
             <div className="max-w-7xl mx-auto sm:px-6 lg:px-8 ">
               <div className="relative shadow-xl sm:rounded-2xl sm:overflow-hidden">
@@ -197,7 +203,8 @@ export default function Navbar() {
                     <div className="space-y-4 sm:space-y-0 sm:mx-auto sm:inline-grid sm:grid-cols-1 sm:gap-5">
                       <a
                         href="#"
-                        className="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm bg-accent text-white  sm:px-8">
+                        className="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm bg-gray-50 hover:bg-gray-200 text-dark sm:px-8"
+                      >
                         Contact Me
                       </a>
                     </div>

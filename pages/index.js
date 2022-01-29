@@ -1,11 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
 import Page from "../components/page";
+import InfoCard from "../components/info-card";
 import Header from "../components/header";
-// import InfoCard from "../components/info-card";
-import ImagePanel from "../components/ImagePanel";
-import Recommendation from "../components/Recommendation";
+import ImagePanel from "../components/image-panel";
+import Recommendation from "../components/recommendation";
 import { ExternalLinkIcon } from "@heroicons/react/solid";
+import Services from "../components/services";
 
 export default function Home() {
   return (
@@ -16,21 +17,25 @@ export default function Home() {
       <Header
         subtitle="Three Core Tenets"
         title="Research, service and integrity."
+        bg="bg-white"
       >
         Darkhorse Advisor LLC. is an independent financial advisory firm located
         in Newport Beach, California. Founded by Alan Flores, a registered
         investment advisor with 27 years of financial portfolio management,
         industry expertise, and market analysis. Alan has built a long-term
         client base from his commitment to three core tenets.
-        {/* <div className="mt-6">
-          <a
-            href="#"
-            className="sm:inline flex justify-center items-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm bg-accent text-white  sm:px-8">
-            Services
-          </a>
-        </div> */}
       </Header>
-      <ImagePanel />
+      <InfoCard />
+      {/* <ImagePanel /> */}
+
+      <Services></Services>
+
+      {/* Testimonials */}
+      <Header
+        subtitle="Darkhorse Advisor"
+        title="Testimonials"
+        bg="bg-gray-50"
+      />
       <Recommendation
         name="Carlos and Mercedes Carchi"
         title="Sr. Network Manager, Belkin International"
