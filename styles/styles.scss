@@ -6,6 +6,10 @@
   @apply hover:text-#{$color}-#{$value};
 }
 
+@mixin hoverBG($color,$value) {
+  @apply hover:bg-#{$color}-#{$value};
+}
+
 // Text
 .text-gray {
   @include text-color("gray", 500);
@@ -29,6 +33,9 @@
 //Background Color
 .bg-accent {
   @apply bg-emerald-500;
+  &.hoverBG {
+    @include hoverBG("emerald",600 )
+  }
 }
 
 // Padding
