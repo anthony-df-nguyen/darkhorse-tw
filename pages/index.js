@@ -3,7 +3,6 @@ import Link from "next/link";
 import Page from "../components/page";
 import InfoCard from "../components/info-card";
 import Header from "../components/header";
-import ImagePanel from "../components/image-panel";
 import Recommendation from "../components/recommendation";
 import { ExternalLinkIcon } from "@heroicons/react/solid";
 import Services from "../components/services";
@@ -26,9 +25,7 @@ export default function Home() {
         client base from his commitment to three core tenets.
       </Header>
       <InfoCard />
-      {/* <ImagePanel /> */}
-
-      <Services></Services>
+      <Services />
 
       {/* Testimonials */}
       <Header
