@@ -72,7 +72,7 @@ export default function Navbar() {
             <Popover.Group as="nav" className="hidden md:flex space-x-10">
               {navigation.map((item) => (
                 <Link key={item.name} href={item.href}>
-                  <span className="text-base font-medium text-gray-500 hover:text-gray-900">
+                  <span className="text-base font-medium text-gray-500 hover:text-gray-900 cursor-pointer">
                     {item.name}
                   </span>
                 </Link>
@@ -117,7 +117,7 @@ export default function Navbar() {
                     <nav className="grid grid-cols-1 gap-7">
                       {navigation.map((item) => (
                         <Link key={item.name} href={item.href}>
-                          <span className="-m-3 p-3 flex items-center rounded-lg">
+                          <span className="-m-3 p-3 flex items-center rounded-lg cursor-pointer">
                             <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-accent text-white">
                               <item.icon
                                 className="h-6 w-6"
@@ -142,7 +142,7 @@ export default function Navbar() {
       <main>
         <div>
           {/* Hero card */}
-          <div className="relative pt-4 pb-16">
+          <div className="relative  pb-16">
             <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gray-100" />
             <div className="max-w-7xl mx-auto sm:px-6 lg:px-8 ">
               <div className="relative shadow-xl sm:rounded-2xl sm:overflow-hidden">
