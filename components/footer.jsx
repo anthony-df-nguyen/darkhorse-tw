@@ -54,7 +54,7 @@ export default function Footer() {
         >
           {navigation.main.map((item) => (
             <div key={item.name} className="px-5 py-2">
-              <span className="text-base font-medium text-gray-500 hover:text-gray-900">
+              <span className="text-base font-medium text-gray-400 hover:text-gray-500">
                 <Link href={item.href}>{item.name}</Link>
               </span>
             </div>
@@ -62,17 +62,13 @@ export default function Footer() {
         </nav>
         <div className="mt-6 flex justify-center space-x-6">
           {navigation.social.map((item) => (
-            <a
-              key={item.name}
-              href={item.href}
-              className="text-gray hover-text"
-            >
+            <a key={item.name} href={item.href}>
               <span className="sr-only text-gray hover-text">{item.name}</span>
               <img className="h-10 w-10" src={item.icon} />
             </a>
           ))}
         </div>
-        <p className="mt-6 text-center text-base  text-gray">
+        <p className="mt-6 text-center text-base text-gray-400">
           Darkhorse Advisor LLC.
         </p>
       </div>
