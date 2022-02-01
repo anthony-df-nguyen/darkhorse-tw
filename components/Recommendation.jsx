@@ -6,14 +6,16 @@ export default function Recommendation(props) {
   }
 
   return (
-    <section className="bg-gray-50 overflow-hidden text-center">
+    <section className="overflow-hidden text-center">
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="relative">
-          <blockquote className="">
+          <blockquote>
             <div className="max-w-3xl mx-auto text-base lg:text-lg text-gray">
-              <p>{props.children}</p>
+              <p className="border-l-4 pl-4 border-green-600">
+                {props.children}
+              </p>
             </div>
-            <footer>
+            <div className="mt-4">
               <div className=" md:flex md:items-center md:justify-center">
                 <div className="text-center md:mt-0 md:ml-4 md:flex md:items-center">
                   <div className="text-base font-medium text-dark">
@@ -28,12 +30,12 @@ export default function Recommendation(props) {
                     <path d="M11 0h3L9 20H6l5-20z" />
                   </svg>
 
-                  <div className="text-base font-medium text-gray">
+                  <div className="text-base font-medium text-gray mt-">
                     {props.title}
                   </div>
                 </div>
               </div>
-            </footer>
+            </div>
           </blockquote>
           <div className="w-min block mx-auto text-accent py-8">
             <DotsHorizontalIcon

@@ -23,7 +23,7 @@ const navigation = [
   },
   {
     name: "Services",
-    href: "/services",
+    href: "/#services",
     icon: QuestionMarkCircleIcon,
   },
   {
@@ -52,7 +52,7 @@ export default function Navbar() {
               <a href="#">
                 <span className="sr-only">Darkhorse</span>
                 <img
-                  className="h-8 w-auto sm:h-10 bg-emerald-600 rounded-md "
+                  className="h-10 w-auto sm:h-10 bg-accent rounded-md "
                   src="images/horse.svg"
                   alt=""
                 />
@@ -62,7 +62,7 @@ export default function Navbar() {
               </div>
             </div>
             <div className="-mr-2 -my-2 md:hidden">
-              <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-sky-500">
+              <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-emerlad-500">
                 <span className="sr-only">Open menu</span>
                 <MenuIcon className="h-6 w-6" aria-hidden="true" />
               </Popover.Button>
@@ -87,7 +87,7 @@ export default function Navbar() {
                             href={item.href}
                             className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
                           >
-                            <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-sky-600 text-white sm:h-12 sm:w-12">
+                            <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-accent text-white sm:h-12 sm:w-12">
                               <item.icon
                                 className="h-6 w-6"
                                 aria-hidden="true"
@@ -139,13 +139,16 @@ export default function Navbar() {
                   <div className="flex items-center justify-between">
                     <div>
                       <img
-                        className="h-8 w-auto bg-gray-900 rounded-md"
+                        className="h-10 w-auto bg-accent rounded-md"
                         src="images/horse.svg"
                         alt="Darkhorse"
                       />
                     </div>
+                    <div className="text-gray-700 font-extrabold">
+                      Darkhorse Advisor
+                    </div>
                     <div className="-mr-2">
-                      <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-sky-500">
+                      <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-emerald-500">
                         <span className="sr-only">Close menu</span>
                         <XIcon className="h-6 w-6" aria-hidden="true" />
                       </Popover.Button>
@@ -159,10 +162,10 @@ export default function Navbar() {
                           href={item.href}
                           className="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50"
                         >
-                          <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-sky-600 text-white">
+                          <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-accent text-white">
                             <item.icon className="h-6 w-6" aria-hidden="true" />
                           </div>
-                          <div className="ml-4 text-base font-medium text-gray-900">
+                          <div className="ml-4 text-base font-medium text-gray-500">
                             {item.name}
                           </div>
                         </a>
@@ -189,7 +192,7 @@ export default function Navbar() {
                     src="images/method.jpg"
                     alt="People working on laptops"
                   />
-                  <div className="absolute inset-0 bg-sky-200 mix-blend-multiply" />
+                  <div className="absolute inset-0 bg-emerald-200 mix-blend-multiply" />
                 </div>
                 <div className="relative px-4 py-60 sm:px-6 lg:px-8">
                   <h1 className="text-center text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">

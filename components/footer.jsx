@@ -12,7 +12,7 @@ const navigation = {
     },
     {
       name: "Services",
-      href: "/services",
+      href: "/#services",
     },
     {
       name: "About",
@@ -55,26 +55,26 @@ export default function Footer() {
             <div key={item.name} className="px-5 py-2">
               <a
                 href={item.href}
-                className="text-base text-gray-500 hover:text-gray-900"
+                className="text-base font-medium text-gray-500 hover:text-gray-900"
               >
                 {item.name}
               </a>
             </div>
           ))}
         </nav>
-        <div className="mt-8 flex justify-center space-x-6">
+        <div className="mt-6 flex justify-center space-x-6">
           {navigation.social.map((item) => (
             <a
               key={item.name}
               href={item.href}
-              className="text-gray-400 hover:text-gray-500"
+              className="text-gray hover-text"
             >
-              <span className="sr-only">{item.name}</span>
+              <span className="sr-only text-gray hover-text">{item.name}</span>
               {item.icon}
             </a>
           ))}
         </div>
-        <p className="mt-8 text-center text-base  text-gray-400">
+        <p className="mt-6 text-center text-base  text-gray">
           Darkhorse Advisor LLC.
         </p>
       </div>
