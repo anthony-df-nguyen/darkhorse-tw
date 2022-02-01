@@ -29,17 +29,17 @@ const navigation = {
     {
       name: "Email",
       href: "mailto:alan@darkhorseadvisor.com",
-      icon: <AiOutlineMail className="h-8 w-8" aria-hidden="true" />,
+      icon: "images/icons/email.png",
     },
     {
       name: "Phone",
       href: "tel:714-394-0243",
-      icon: <AiOutlinePhone className="h-8 w-8" aria-hidden="true" />,
+      icon: "images/icons/phone.png",
     },
     {
       name: "LinkedIn",
       href: "https://www.linkedin.com/company/darkhorseadvisor/about/",
-      icon: <AiOutlineLinkedin className="h-8 w-8" aria-hidden="true" />,
+      icon: "images/icons/linkedin.png",
     },
   ],
 };
@@ -68,7 +68,7 @@ export default function Footer() {
               className="text-gray hover-text"
             >
               <span className="sr-only text-gray hover-text">{item.name}</span>
-              {item.icon}
+              <img className="h-10 w-10" src={item.icon} />
             </a>
           ))}
         </div>
