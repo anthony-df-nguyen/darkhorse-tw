@@ -9,11 +9,11 @@ export default function Services() {
           aria-hidden="true"
         >
           <svg
-            className="absolute top-1/2 right-full transform -translate-y-1/2 -translate-x-32"
+            className="absolute top-40 right-full transform -translate-y-1/2 -translate-x-32"
             width={404}
-            height={384}
+            height={192}
             fill="none"
-            viewBox="0 0 404 384"
+            viewBox="0 0 404 192"
           >
             <defs>
               <pattern
@@ -36,16 +36,16 @@ export default function Services() {
             </defs>
             <rect
               width={404}
-              height={384}
+              height={192}
               fill="url(#f210dbf6-a58d-4871-961e-36d5016a0f49)"
             />
           </svg>
           <svg
             className="absolute bottom-12 left-full transform translate-x-32"
             width={404}
-            height={384}
+            height={192}
             fill="none"
-            viewBox="0 0 404 384"
+            viewBox="0 0 404 192"
           >
             <defs>
               <pattern
