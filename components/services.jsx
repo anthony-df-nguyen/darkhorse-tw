@@ -6,15 +6,13 @@ export default function Services() {
       <div className="hidden lg:block lg:absolute lg:inset-y-0 lg:h-full lg:w-full">
         <div
           className="relative h-full text-lg max-w-prose mx-auto"
-          aria-hidden="true"
-        >
+          aria-hidden="true">
           <svg
             className="absolute top-40 right-full transform -translate-y-1/2 -translate-x-32"
             width={404}
             height={192}
             fill="none"
-            viewBox="0 0 404 192"
-          >
+            viewBox="0 0 404 192">
             <defs>
               <pattern
                 id="f210dbf6-a58d-4871-961e-36d5016a0f49"
@@ -22,8 +20,7 @@ export default function Services() {
                 y={0}
                 width={20}
                 height={20}
-                patternUnits="userSpaceOnUse"
-              >
+                patternUnits="userSpaceOnUse">
                 <rect
                   x={0}
                   y={0}
@@ -45,8 +42,7 @@ export default function Services() {
             width={404}
             height={192}
             fill="none"
-            viewBox="0 0 404 192"
-          >
+            viewBox="0 0 404 192">
             <defs>
               <pattern
                 id="d3eb07ae-5182-43e6-857d-35c643af9034"
@@ -54,8 +50,7 @@ export default function Services() {
                 y={0}
                 width={20}
                 height={20}
-                patternUnits="userSpaceOnUse"
-              >
+                patternUnits="userSpaceOnUse">
                 <rect
                   x={0}
                   y={0}
@@ -84,27 +79,22 @@ export default function Services() {
             <a
               href="/pdf-files/darkhorse-adv.pdf"
               download="darkhorse-adv"
-              className="text-accent"
-            >
+              className="text-accent">
               Download Form ADV
             </a>
           </span>
         </Header>
-        <div className="mt-6 prose prose-lg text-base lg:text-md text-gray mx-auto">
-          <div className="flex place-content-evenly mr-12">
-            <ul role="list">
-              <li>Business Planning</li>
-              <li>Estate Planning</li>
-              <li>Cash Flow</li>
-              <li>Tax Needs</li>
-            </ul>
-            <ul>
-              <li>Investment</li>
-              <li>Insurance</li>
-              <li>Retirement</li>
-              <li>Education</li>
-            </ul>
-          </div>
+        <div className="max-w-3xl mt-6  text-base lg:text-md text-gray mx-auto">
+          <ul role="list" className="list-disc columns-3">
+            <li>Business Planning</li>
+            <li>Estate Planning</li>
+            <li>Cash Flow</li>
+            <li>Tax Needs</li>
+            <li>Investment</li>
+            <li>Insurance</li>
+            <li>Retirement</li>
+            <li>Education</li>
+          </ul>
         </div>
       </div>
     </div>

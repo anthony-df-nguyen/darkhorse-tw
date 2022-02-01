@@ -40,11 +40,11 @@
 
 // Padding
 @mixin pad-top($value) {
-  @apply pt-#{$value};
+  @apply pt-#{$value} md:pt-#{$value + 8};
 }
 
 @mixin pad-tb($value) {
-  @apply py-#{$value};
+  @apply py-#{$value} md:py-#{$value + 8};
 }
 
 .pad-top {
