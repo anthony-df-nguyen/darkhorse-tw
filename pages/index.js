@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Hero from "../components/hero";
 import Link from "next/link";
 import Page from "../components/page";
 import InfoCard from "../components/info-card";
@@ -7,17 +8,52 @@ import Recommendation from "../components/recommendation";
 import { ExternalLinkIcon } from "@heroicons/react/solid";
 import Services from "../components/services";
 
+import {
+  GlobeAltIcon,
+  LightningBoltIcon,
+  ScaleIcon,
+} from "@heroicons/react/outline";
+
+import { GiMagnifyingGlass } from "react-icons/gi";
+
 export default function Home() {
+  const features = [
+    {
+      name: "Research",
+      description:
+        "Today market volatility is unprecedented. By applying a market-proven proprietary blend of fundamental and technical analysis, DHA is effectively able to identify and avoid market risk while focusing on systematically uncovering and capturing the right quality and value opportunities.",
+      icon: GiMagnifyingGlass,
+    },
+    {
+      name: "Service",
+      description:
+        "DHA is committed to understanding long and short-term financial and investment objectives, needs, and risk tolerances of each customer. Aligning a well-built investment portfolio for each unique client profile substantially increases the likelihood of achieving positive wealth goals.",
+      icon: ScaleIcon,
+    },
+    {
+      name: "Integrity",
+      description:
+        "As an independent fiduciary advisor, DHA has no affiliation with any products or service companies including wholesalers or retail brokerages. DHA has no conflicts of interest and does not receive any commission fees, assuring that advice is always centered on what is best for the client. All client fee arrangements are modest and transparent, based on the value of the account(s) under management.",
+      icon: LightningBoltIcon,
+    },
+  ];
+
   return (
     <Page
       title="Darkhorse Advisor"
       description="Individualized financial planning and advice."
     >
+      <Hero
+        image="/images/method.jpg"
+        title="Darkhorse"
+        accent="Advisor"
+        text="Individualized financial planning and advisory."
+        cta={true}
+      />
       <div className="pad-top">
         <Header
           subtitle="Three Core Tenets"
           title="Research, service and integrity."
-          bg="bg-white"
         >
           Darkhorse Advisor LLC. is an independent financial advisory firm
           located in Newport Beach, California. Founded by Alan Flores, a
@@ -27,7 +63,21 @@ export default function Home() {
         </Header>
       </div>
       <div className="pad-top">
-        <InfoCard />
+        <div className="max-w-7xl mx-auto relative">
+          <div className="mx-auto text-center ">
+            <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
+              {features.map((feature) => (
+                <div key={feature.name}>
+                  <InfoCard
+                    name={feature.name}
+                    description={feature.description}
+                    icon={<feature.icon />}
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
       </div>
       <div className="pad-tb">
         <Services />

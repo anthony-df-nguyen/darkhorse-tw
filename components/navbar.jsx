@@ -87,10 +87,12 @@ export default function Navbar() {
             enterTo="opacity-100 scale-100"
             leave="duration-100 ease-in"
             leaveFrom="opacity-100 scale-100"
-            leaveTo="opacity-0 scale-95">
+            leaveTo="opacity-0 scale-95"
+          >
             <Popover.Panel
               focus
-              className="absolute z-30 top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden">
+              className="absolute z-30 top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden"
+            >
               <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50">
                 <div className="pt-5 pb-6 px-5">
                   <div className="flex items-center justify-between">
@@ -142,39 +144,6 @@ export default function Navbar() {
       <main>
         <div>
           {/* Hero card */}
-          <div className="relative  pb-16">
-            <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gray-100" />
-            <div className="max-w-7xl mx-auto sm:px-6 lg:px-8 ">
-              <div className="relative shadow-xl sm:rounded-2xl sm:overflow-hidden">
-                <div className="absolute inset-0">
-                  <img
-                    className="h-full w-full object-cover"
-                    src="images/method.jpg"
-                    alt="People working on laptops"
-                  />
-                  <div className="absolute inset-0 bg-gray-200 mix-blend-multiply" />
-                </div>
-                <div className="relative px-4 py-60 sm:px-6 lg:px-8">
-                  <h1 className="text-center text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
-                    <span className="text-white">Darkhorse</span>{" "}
-                    <span className="text-accent">Advisor</span>
-                  </h1>
-                  <p className="mt-6 max-w-lg mx-auto text-center text-xl font-semibold text-white sm:max-w-3xl">
-                    Individualized financial planning and advisory.
-                  </p>
-                  <div className="mt-10 max-w-sm mx-auto sm:max-w-none sm:flex sm:justify-center">
-                    <div className="space-y-4 sm:space-y-0 sm:mx-auto sm:inline-grid sm:grid-cols-1 sm:gap-5">
-                      <Link href="/contact">
-                        <span className="cursor-pointer flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm bg-accent hoverBG text-white sm:px-8">
-                          Contact Me
-                        </span>
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
 
           {/* Logo cloud */}
         </div>
