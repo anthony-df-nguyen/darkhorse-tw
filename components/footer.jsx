@@ -3,6 +3,7 @@ import {
   AiOutlineMail,
   AiOutlinePhone,
 } from "react-icons/ai";
+import Link from "next/link";
 
 const navigation = {
   main: [
@@ -53,12 +54,9 @@ export default function Footer() {
         >
           {navigation.main.map((item) => (
             <div key={item.name} className="px-5 py-2">
-              <a
-                href={item.href}
-                className="text-base font-medium text-gray-500 hover:text-gray-900"
-              >
-                {item.name}
-              </a>
+              <span className="text-base font-medium text-gray-500 hover:text-gray-900">
+                <Link href={item.href}>{item.name}</Link>
+              </span>
             </div>
           ))}
         </nav>

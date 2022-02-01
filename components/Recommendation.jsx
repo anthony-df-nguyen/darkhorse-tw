@@ -11,7 +11,7 @@ export default function Recommendation(props) {
         <div className="relative">
           <blockquote>
             <div className="max-w-3xl mx-auto text-base lg:text-lg text-gray">
-              <p className="border-l-4 pl-4 border-green-600">
+              <p className="border-l-4 pl-4 border-emerald-500">
                 {props.children}
               </p>
             </div>
