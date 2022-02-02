@@ -2,7 +2,6 @@ import Link from "next/link";
 // import Image from "next/image";
 
 export default function Hero(props) {
-  console.log(props.image);
   return (
     <div className="relative pb-16">
       <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gray-100" />
