@@ -6,7 +6,7 @@ export default function InfoCard(props) {
           {props.icon && (
             <div>
               <span className="inline-flex items-center justify-center p-3 bg-accent rounded-md shadow-lg">
-                <span className="h-6 w-6 text-white" aria-hidden="true">
+                <span className="text-white text-2xl" aria-hidden="true">
                   {props.icon}
                 </span>
               </span>

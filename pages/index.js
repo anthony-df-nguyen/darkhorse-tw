@@ -14,7 +14,8 @@ import {
   ScaleIcon,
 } from "@heroicons/react/outline";
 
-import { GiMagnifyingGlass } from "react-icons/gi";
+import { AiTwotoneThunderbolt, AiTwotoneEdit } from "react-icons/ai";
+import { FaBookOpen } from "react-icons/fa";
 
 export default function Home() {
   const features = [
@@ -22,19 +23,19 @@ export default function Home() {
       name: "Research",
       description:
         "Today market volatility is unprecedented. By applying a market-proven proprietary blend of fundamental and technical analysis, DHA is effectively able to identify and avoid market risk while focusing on systematically uncovering and capturing the right quality and value opportunities.",
-      icon: GiMagnifyingGlass,
+      icon: <FaBookOpen />,
     },
     {
       name: "Service",
       description:
         "DHA is committed to understanding long and short-term financial and investment objectives, needs, and risk tolerances of each customer. Aligning a well-built investment portfolio for each unique client profile substantially increases the likelihood of achieving positive wealth goals.",
-      icon: ScaleIcon,
+      icon: <AiTwotoneEdit />,
     },
     {
       name: "Integrity",
       description:
         "As an independent fiduciary advisor, DHA has no affiliation with any products or service companies including wholesalers or retail brokerages. DHA has no conflicts of interest and does not receive any commission fees, assuring that advice is always centered on what is best for the client. All client fee arrangements are modest and transparent, based on the value of the account(s) under management.",
-      icon: LightningBoltIcon,
+      icon: <AiTwotoneThunderbolt />,
     },
   ];
 
@@ -71,7 +72,7 @@ export default function Home() {
                   <InfoCard
                     name={feature.name}
                     description={feature.description}
-                    icon={<feature.icon />}
+                    icon={feature.icon}
                   />
                 </div>
               ))}

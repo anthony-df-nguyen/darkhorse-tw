@@ -10,7 +10,7 @@ export default function Page(props) {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <link rel="icon" href="/favicon.ico" />
         <meta type="description" content={props.description}></meta>
-        <meta charset="UTF-8"></meta>
+        <meta charSet="UTF-8"></meta>
         <meta name="author" content="Web Developer: Kenneth Kieu"></meta>
         {props.noindex && <meta name="robots" content="noindex"></meta>}
         <meta
