@@ -14,7 +14,7 @@ export default function PrivacyPolicy(props) {
         cta={true}
       />
 
-      <div className="relative pad-top bg-white overflow-hidden">
+      <div className="relative pad-top bg-gray-100 overflow-hidden">
         <div className="hidden lg:block lg:absolute lg:inset-y-0 lg:h-full lg:w-full">
           <div
             className="relative h-full text-lg max-w-prose mx-auto"
@@ -41,7 +41,7 @@ export default function PrivacyPolicy(props) {
                     y={0}
                     width={4}
                     height={4}
-                    className="text-gray-200"
+                    className="text-gray-300"
                     fill="currentColor"
                   />
                 </pattern>
@@ -73,7 +73,7 @@ export default function PrivacyPolicy(props) {
                     y={0}
                     width={4}
                     height={4}
-                    className="text-gray-200"
+                    className="text-gray-300"
                     fill="currentColor"
                   />
                 </pattern>
@@ -105,7 +105,7 @@ export default function PrivacyPolicy(props) {
                     y={0}
                     width={4}
                     height={4}
-                    className="text-gray-200"
+                    className="text-gray-300"
                     fill="currentColor"
                   />
                 </pattern>

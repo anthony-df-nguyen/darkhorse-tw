@@ -51,31 +51,33 @@ export default function Home() {
         text="Individualized financial planning and advisory."
         cta={true}
       />
-      <div className="pad-top">
-        <Header
-          subtitle="Three Core Tenets"
-          title="Research, service and integrity."
-        >
-          Darkhorse Advisor LLC. is an independent financial advisory firm
-          located in Newport Beach, California. Founded by Alan Flores, a
-          registered investment advisor with 27 years of financial portfolio
-          management, industry expertise, and market analysis. Alan has built a
-          long-term client base from his commitment to three core tenets.
-        </Header>
-      </div>
-      <div className="pt-8">
-        <div className="max-w-7xl mx-auto relative">
-          <div className="mx-auto text-center">
-            <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
-              {features.map((feature) => (
-                <div key={feature.name}>
-                  <InfoCard
-                    name={feature.name}
-                    description={feature.description}
-                    icon={feature.icon}
-                  />
-                </div>
-              ))}
+      <div className="bg-gray-100">
+        <div className="pad-top">
+          <Header
+            subtitle="Three Core Tenets"
+            title="Research, service and integrity."
+          >
+            Darkhorse Advisor LLC. is an independent financial advisory firm
+            located in Newport Beach, California. Founded by Alan Flores, a
+            registered investment advisor with 27 years of financial portfolio
+            management, industry expertise, and market analysis. Alan has built
+            a long-term client base from his commitment to three core tenets.
+          </Header>
+        </div>
+        <div className="pt-8 pb-16">
+          <div className="max-w-7xl mx-auto relative">
+            <div className="mx-auto text-center">
+              <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
+                {features.map((feature) => (
+                  <div key={feature.name}>
+                    <InfoCard
+                      name={feature.name}
+                      description={feature.description}
+                      icon={feature.icon}
+                    />
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>

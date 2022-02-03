@@ -39,7 +39,7 @@ export default function Contact() {
         />
       </div>
 
-      <div className="pad-top">
+      <div className="pad-tb bg-gray-100">
         <div className="max-w-7xl mx-auto sm:px-6 lg:px-8 relative">
           <div className="mx-auto text-center">
             <Header subtitle="Darkhorse Advisor" title="Contact Me" />

@@ -1,7 +1,7 @@
 export default function InfoCard(props) {
   return (
     <div className="pt-6">
-      <div className="flow-root bg-gray-50 rounded-lg px-6 pb-8 h-full">
+      <div className="flow-root bg-white rounded-lg px-6 pb-8 h-full">
         <div className="mt-6">
           {props.icon && (
             <div>
