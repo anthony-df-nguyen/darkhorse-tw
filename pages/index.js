@@ -52,18 +52,17 @@ export default function Home() {
         cta={true}
       />
       <div className="bg-gray-100">
-        <div className="pad-top">
-          <Header
-            subtitle="Three Core Tenets"
-            title="Research, service and integrity."
-          >
-            Darkhorse Advisor LLC. is an independent financial advisory firm
-            located in Newport Beach, California. Founded by Alan Flores, a
-            registered investment advisor with 27 years of financial portfolio
-            management, industry expertise, and market analysis. Alan has built
-            a long-term client base from his commitment to three core tenets.
-          </Header>
-        </div>
+        <Header
+          subtitle="Three Core Tenets"
+          title="Research, service and integrity."
+        >
+          Darkhorse Advisor LLC. is an independent financial advisory firm
+          located in Newport Beach, California. Founded by Alan Flores, a
+          registered investment advisor with 27 years of financial portfolio
+          management, industry expertise, and market analysis. Alan has built a
+          long-term client base from his commitment to three core tenets.
+        </Header>
+
         <div className="pt-8 pb-16">
           <div className="max-w-7xl mx-auto relative">
             <div className="mx-auto text-center">

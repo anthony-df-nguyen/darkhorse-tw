@@ -6,7 +6,7 @@
   @apply hover:text-#{$color}-#{$value};
 }
 
-@mixin hoverBG($color,$value) {
+@mixin hoverBG($color, $value) {
   @apply hover:bg-#{$color}-#{$value};
 }
 
@@ -34,7 +34,7 @@
 .bg-accent {
   @apply bg-emerald-500;
   &.hoverBG {
-    @include hoverBG("emerald",600 )
+    @include hoverBG("emerald", 600);
   }
 }
 
@@ -48,9 +48,9 @@
 }
 
 .pad-top {
-  @include pad-top(16);
+  @include pad-top(8);
 }
 
 .pad-tb {
-  @include pad-tb(16);
+  @include pad-tb(8);
 }

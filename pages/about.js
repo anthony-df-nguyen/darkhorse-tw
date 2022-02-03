@@ -14,7 +14,7 @@ export default function () {
         text="Learn more about Alan Flores, Darkhorse Advisor."
       />
       <div>
-        <div className="bg-gray-100 pad-tb overflow-hidden">
+        <div className="bg-gray-100 pb-16 overflow-hidden">
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="hidden lg:block absolute top-0 bottom-0 left-3/4 w-screen" />
             <div className="mx-auto text-base max-w-prose lg:grid lg:grid-cols-2 lg:gap-8 lg:max-w-none">
