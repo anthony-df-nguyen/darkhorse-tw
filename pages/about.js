@@ -6,7 +6,13 @@ import { CameraIcon } from "@heroicons/react/solid";
 export default function () {
   return (
     <Page title="About" description="Learn more about Alan.">
-      <Hero title="About" accent="Me" image="/images/aboutme.jpg" />
+      <Hero
+        title="About"
+        accent="Me"
+        image="/images/aboutme.jpg"
+        cta="true"
+        text="Learn more about Alan Flores, Darkhorse Advisor."
+      />
       <div>
         <div className="bg-white overflow-hidden">
           <div className="relative max-w-7xl mx-auto pad-top px-4 sm:px-6 lg:px-8">
@@ -57,24 +63,15 @@ export default function () {
                   />
                 </svg>
                 <div className="relative text-base mx-auto max-w-prose lg:max-w-none">
-                  <figure>
-                    <div className="aspect-w-6 aspect-h-7 lg:mx-auto">
-                      <img
-                        className="rounded-lg shadow-lg object-cover object-center"
-                        src="/images/alan.png"
-                        alt="Portrait of Alan Flores"
-                        width={1184}
-                        height={1376}
-                      />
-                    </div>
-                    {/* <figcaption className="mt-3 flex text-sm text-gray-500">
-                      <CameraIcon
-                        className="flex-none w-5 h-5 text-gray-400"
-                        aria-hidden="true"
-                      />
-                      <span className="ml-2">Photograph by Marcus O’Leary</span>
-                    </figcaption> */}
-                  </figure>
+                  <div className="aspect-w-6 aspect-h-7 lg:mx-auto">
+                    <img
+                      className="rounded-lg shadow-lg object-cover object-center"
+                      src="/images/alan.png"
+                      alt="Portrait of Alan Flores"
+                      width={1184}
+                      height={1376}
+                    />
+                  </div>
                 </div>
               </div>
               <div className="mt-8 lg:mt-0 leading-8 text-gray">

@@ -1,18 +1,51 @@
 import Header from "./header";
+import { IoMdDownload } from "react-icons/io";
 
 export default function Services() {
+  const servicesGridOne = [
+    {
+      title: "Business Planning",
+    },
+    {
+      title: "Estate Planning",
+    },
+    {
+      title: "Investment",
+    },
+    {
+      title: "Insurance",
+    },
+  ];
+
+  const servicesGridTwo = [
+    {
+      title: "Retirement",
+    },
+    {
+      title: "Education",
+    },
+    {
+      title: "Tax needs",
+    },
+    {
+      title: "Cash flow needs",
+    },
+  ];
+
   return (
     <div id="services" className="relative overflow-hidden">
       <div className="hidden lg:block lg:absolute lg:inset-y-0 lg:h-full lg:w-full">
         <div
           className="relative h-full text-lg max-w-prose mx-auto"
-          aria-hidden="true">
+          aria-hidden="true"
+        >
           <svg
             className="absolute top-40 right-full transform -translate-y-1/2 -translate-x-32"
             width={404}
             height={192}
             fill="none"
-            viewBox="0 0 404 192">
+            viewBox="0 0 404 192"
+          >
             <defs>
               <pattern
                 id="f210dbf6-a58d-4871-961e-36d5016a0f49"
@@ -20,7 +53,8 @@ export default function Services() {
                 y={0}
                 width={20}
                 height={20}
-                patternUnits="userSpaceOnUse">
+                patternUnits="userSpaceOnUse"
+              >
                 <rect
                   x={0}
                   y={0}
@@ -42,7 +76,8 @@ export default function Services() {
             width={404}
             height={192}
             fill="none"
-            viewBox="0 0 404 192">
+            viewBox="0 0 404 192"
+          >
             <defs>
               <pattern
                 id="d3eb07ae-5182-43e6-857d-35c643af9034"
@@ -50,7 +85,8 @@ export default function Services() {
                 y={0}
                 width={20}
                 height={20}
-                patternUnits="userSpaceOnUse">
+                patternUnits="userSpaceOnUse"
+              >
                 <rect
                   x={0}
                   y={0}
@@ -74,28 +110,43 @@ export default function Services() {
           Darkhorse Advisor provides clients with wealth management services
           which include a broad range of comprehensive financial planning and
           consulting services management of investment portfolios.{" "}
-          <span>
+          <div className="flow-root mt-6 md:mt-12 grid grid-cols-2">
+            <ul role="list" className="-my-5 divide-y divide-gray-200">
+              {servicesGridOne.map((announcement) => (
+                <li key={announcement.title} className="py-5">
+                  <div className="relative">
+                    <h3 className="text-sm font-semibold text-dark">
+                      <span className="absolute inset-0" aria-hidden="true" />
+                      {announcement.title}
+                    </h3>
+                  </div>
+                </li>
+              ))}
+            </ul>
+            <ul role="list" className="-my-5 divide-y divide-gray-200">
+              {servicesGridTwo.map((announcement) => (
+                <li key={announcement.title} className="py-5">
+                  <div className="relative">
+                    <h3 className="text-sm font-semibold text-dark">
+                      <span className="absolute inset-0" aria-hidden="true" />
+                      {announcement.title}
+                    </h3>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="mt-6 md:mt-12">
             Ready to receive quality advice and services?{" "}
             <a
               href="/pdf-files/darkhorse-adv.pdf"
               download="darkhorse-adv"
-              className="text-accent">
-              Download Form ADV
+              className="text-accent font-semibold underline"
+            >
+              ADV Form
             </a>
-          </span>
+          </div>
         </Header>
-        <div className="max-w-3xl mt-6  text-base lg:text-md text-gray mx-auto">
-          <ul role="list" className="list-disc columns-3">
-            <li>Business Planning</li>
-            <li>Estate Planning</li>
-            <li>Cash Flow</li>
-            <li>Tax Needs</li>
-            <li>Investment</li>
-            <li>Insurance</li>
-            <li>Retirement</li>
-            <li>Education</li>
-          </ul>
-        </div>
       </div>
     </div>
   );

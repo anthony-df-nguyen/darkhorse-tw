@@ -63,9 +63,9 @@ export default function Home() {
           long-term client base from his commitment to three core tenets.
         </Header>
       </div>
-      <div className="pad-top">
+      <div className="pt-8">
         <div className="max-w-7xl mx-auto relative">
-          <div className="mx-auto text-center ">
+          <div className="mx-auto text-center">
             <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
               {features.map((feature) => (
                 <div key={feature.name}>
