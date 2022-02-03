@@ -10,7 +10,7 @@ export default function Recommendation(props) {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="relative">
           <blockquote>
-            <div className="max-w-3xl mx-auto text-base lg:text-lg text-gray">
+            <div className="max-w-3xl mx-auto text-base lg:text-lg text-gray italic">
               <p className="border-l-4 pl-4 border-emerald-500">
                 {props.children}
               </p>

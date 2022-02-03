@@ -57,7 +57,7 @@ export default function Navbar() {
                     src="images/horse.svg"
                     alt="horse-icon"
                   />
-                  <span className="ml-4 text-2xl text-dark font-extrabold ">
+                  <span className="ml-4 text-2xl text-dark font-extrabold">
                     Darkhorse Advisor
                   </span>
                 </span>
