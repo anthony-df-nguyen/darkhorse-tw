@@ -112,24 +112,24 @@ export default function Services() {
           consulting services management of investment portfolios.{" "}
           <div className="flow-root mt-6 md:mt-12 grid grid-cols-2">
             <ul role="list" className="-my-5 divide-y divide-gray-200">
-              {servicesGridOne.map((announcement) => (
-                <li key={announcement.title} className="py-5">
+              {servicesGridOne.map((service) => (
+                <li key={service.title} className="py-5">
                   <div className="relative">
                     <h3 className="text-sm font-semibold text-dark">
                       <span className="absolute inset-0" aria-hidden="true" />
-                      {announcement.title}
+                      {service.title}
                     </h3>
                   </div>
                 </li>
               ))}
             </ul>
             <ul role="list" className="-my-5 divide-y divide-gray-200">
-              {servicesGridTwo.map((announcement) => (
-                <li key={announcement.title} className="py-5">
+              {servicesGridTwo.map((service) => (
+                <li key={service.title} className="py-5">
                   <div className="relative">
                     <h3 className="text-sm font-semibold text-dark">
                       <span className="absolute inset-0" aria-hidden="true" />
-                      {announcement.title}
+                      {service.title}
                     </h3>
                   </div>
                 </li>

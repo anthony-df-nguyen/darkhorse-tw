@@ -71,7 +71,12 @@ export default function Footer() {
             </a>
           ))}
         </div>
-        <p className="mt-6 text-base text-gray-400">Darkhorse Advisor LLC.</p>
+        <div className="mt-6 text-base text-gray-400">
+          <p>Darkhorse Advisor LLC.</p>
+          <Link href="/privacy-policy">
+            <p className="mt-6 underline cursor-pointer">Privacy Policy</p>
+          </Link>
+        </div>
       </div>
     </footer>
   );
