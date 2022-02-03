@@ -34,8 +34,8 @@ export default function Contact() {
       <div>
         <Hero
           image="/images/testimonial-min.jpeg"
-          title="Contact"
-          accent="Me"
+          title="Contact Me"
+          text="Contact Darkhorse Advisor through Email, Phone or LinkedIn."
         />
       </div>
 

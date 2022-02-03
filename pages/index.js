@@ -46,8 +46,7 @@ export default function Home() {
     >
       <Hero
         image="/images/method.jpg"
-        title="Darkhorse"
-        accent="Advisor"
+        title="Darkhorse Advisor"
         text="Individualized financial planning and advisory."
         cta={true}
       />

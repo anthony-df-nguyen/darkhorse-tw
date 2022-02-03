@@ -7,8 +7,7 @@ export default function () {
   return (
     <Page title="About" description="Learn more about Alan.">
       <Hero
-        title="About"
-        accent="Me"
+        title="About Me"
         image="/images/aboutme.jpg"
         cta="true"
         text="Learn more about Alan Flores, Darkhorse Advisor."

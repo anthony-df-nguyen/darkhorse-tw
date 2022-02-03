@@ -6,7 +6,7 @@
   @apply hover:text-#{$color}-#{$value};
 }
 
-@mixin hoverBG($color, $value) {
+@mixin hover-bg($color, $value) {
   @apply hover:bg-#{$color}-#{$value};
 }
 
@@ -33,8 +33,8 @@
 //Background Color
 .bg-accent {
   @apply bg-emerald-500;
-  &.hoverBG {
-    @include hoverBG("emerald", 600);
+  &.hover-bg {
+    @include hover-bg("emerald", 600);
   }
 }
 
