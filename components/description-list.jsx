@@ -8,7 +8,7 @@ export default function DescriptionList() {
           Updates and Review
         </h3>
         <p className="mt-1 max-w-2xl text-sm text-gray-500">
-          Firm Prinical Attestation
+          Firm Principal Attestation
         </p>
       </div>
       <div className="border-t border-gray-200 px-4 py-5 sm:p-0">
