@@ -43,7 +43,7 @@ export default function Contact() {
         <div className="max-w-7xl mx-auto sm:px-6 lg:px-8">
           <div className="mx-auto text-center">
             <Header subtitle="Darkhorse Advisor" title="Contact Me" />
-            <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
+            <div className="grid grid-cols-1 gap-8 lg:grid-cols-3 pt-4 sm:pt-12">
               {contacts.map((contact) => {
                 return (
                   <div key={contact.name}>

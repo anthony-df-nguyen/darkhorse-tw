@@ -100,12 +100,13 @@ export default function Navbar() {
                     <Link href="/">
                       <span className="flex items-center cursor-pointer">
                         <img
-                          className="inline h-10 w-auto sm:h-10 bg-accent rounded-md"
+                          className="inline h-10 w-auto bg-gray-800 p-1 rounded-md"
                           src="images/horse.svg"
                           alt="horse-icon"
                         />
                         <span className="ml-4 text-xl text-dark font-extrabold ">
-                          Darkhorse Advisor
+                          Darkhorse
+                          <span className="text-accent"> Advisor</span>
                         </span>
                       </span>
                     </Link>
