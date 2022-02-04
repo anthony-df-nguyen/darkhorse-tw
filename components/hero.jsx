@@ -1,5 +1,5 @@
 import Link from "next/link";
-// import Image from "next/image";
+import Image from "next/image";
 
 export default function Hero(props) {
   return (
@@ -8,7 +8,15 @@ export default function Hero(props) {
       <div className="max-w-7xl mx-auto sm:px-6 lg:px-8">
         <div className="relative shadow-xl sm:rounded-2xl sm:overflow-hidden">
           <div className="absolute inset-0">
-            <img className="h-full w-full object-cover" src={props.image} />
+            <div className="relative h-full w-full">
+              <Image
+                objectFit="cover"
+                src={props.image}
+                layout="fill"
+                quality={75}
+                priority={true}
+              />
+            </div>
             <div className="absolute inset-0 bg-gray-200 mix-blend-multiply" />
           </div>
           <div className="relative px-4 py-60 sm:px-6 lg:px-8">
