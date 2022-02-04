@@ -12,7 +12,7 @@ export default function InfoCard(props) {
               </span>
             </div>
           )}
-          <h3 className="mt-8 text-lg font-medium text-gray-900 tracking-tight">
+          <h3 className="mt-6 text-lg font-medium text-gray-900 tracking-tight">
             {props.name}
           </h3>
           {props.href ? (

@@ -23,18 +23,22 @@
 }
 
 .text-accent {
-  @include text-color("emerald", 500);
+  @include text-color("teal", 500);
+  &.hover-text {
+    @include hover("teal", 600);
+  }
 }
 
 .text-accent-dark {
-  @include text-color("emerald", 600);
+  @include text-color("teal", 600);
 }
 
 //Background Color
 .bg-accent {
-  @apply bg-emerald-500;
+  @apply bg-teal-500;
+  @apply bg-opacity-95;
   &.hover-bg {
-    @include hover-bg("emerald", 600);
+    @include hover-bg("teal", 600);
   }
 }
 

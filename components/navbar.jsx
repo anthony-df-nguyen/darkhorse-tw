@@ -53,18 +53,19 @@ export default function Navbar() {
               <Link href="/">
                 <span className="flex items-center cursor-pointer">
                   <img
-                    className="inline h-10 w-auto sm:h-10 bg-accent rounded-md"
+                    className="inline h-10 w-auto bg-gray-800 p-1 rounded-md"
                     src="images/horse.svg"
                     alt="horse-icon"
                   />
                   <span className="ml-4 text-2xl text-dark font-extrabold">
-                    Darkhorse Advisor
+                    Darkhorse
+                    <span className="text-accent"> Advisor</span>
                   </span>
                 </span>
               </Link>
             </div>
             <div className="-mr-2 -my-2 md:hidden">
-              <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-emerald-500">
+              <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-teal-500">
                 <span className="sr-only">Open menu</span>
                 <MenuIcon className="h-6 w-6" aria-hidden="true" />
               </Popover.Button>
@@ -109,14 +110,14 @@ export default function Navbar() {
                       </span>
                     </Link>
                     <div className="-mr-2">
-                      <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-emerald-500">
+                      <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-teal-500">
                         <span className="sr-only">Close menu</span>
                         <XIcon className="h-6 w-6" aria-hidden="true" />
                       </Popover.Button>
                     </div>
                   </div>
                   <div className="mt-6">
-                    <nav className="grid grid-cols-1 gap-7">
+                    <nav className="grid grid-cols-1 gap-6">
                       {navigation.map((item) => (
                         <Link key={item.name} href={item.href}>
                           <span className="-m-3 p-3 flex items-center rounded-lg cursor-pointer">

@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Hero(props) {
   return (
-    <div className="relative pb-16">
+    <div className="relative">
       <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gray-100" />
       <div className="max-w-7xl mx-auto sm:px-6 lg:px-8">
         <div className="relative shadow-xl sm:rounded-2xl sm:overflow-hidden">

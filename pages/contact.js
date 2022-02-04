@@ -39,8 +39,8 @@ export default function Contact() {
         />
       </div>
 
-      <div className="bg-gray-100 pb-16">
-        <div className="max-w-7xl mx-auto sm:px-6 lg:px-8 relative">
+      <div className="bg-gray-100 pad-tb">
+        <div className="max-w-7xl mx-auto sm:px-6 lg:px-8">
           <div className="mx-auto text-center">
             <Header subtitle="Darkhorse Advisor" title="Contact Me" />
             <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
