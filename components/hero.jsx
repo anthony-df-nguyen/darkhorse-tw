@@ -29,6 +29,17 @@ export default function Hero(props) {
                 </div>
               </div>
             )}
+            {props.policy && (
+              <div className="mt-10 max-w-sm mx-auto sm:max-w-none sm:flex sm:justify-center">
+                <div className="space-y-4 sm:space-y-0 sm:mx-auto sm:inline-grid sm:grid-cols-1 sm:gap-5">
+                  <Link href="/privacy-policy">
+                    <span className="cursor-pointer flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm bg-accent hover-bg text-white sm:px-8">
+                      Privacy Policy
+                    </span>
+                  </Link>
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </div>

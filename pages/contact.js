@@ -36,6 +36,7 @@ export default function Contact() {
           image="/images/testimonial-min.jpeg"
           title="Contact Me"
           text="Contact Darkhorse Advisor through Email, Phone or LinkedIn."
+          policy={true}
         />
       </div>
 
