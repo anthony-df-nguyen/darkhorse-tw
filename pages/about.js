@@ -9,7 +9,9 @@ export default function () {
       <Hero
         title="About Me"
         image="/images/aboutme.jpg"
-        cta="true"
+        cta={true}
+        cta_text="Contact Us"
+        cta_href="/contact"
         text="Learn more about Alan Flores, Darkhorse Advisor."
       />
 
@@ -34,8 +36,7 @@ export default function () {
                 height={384}
                 fill="none"
                 viewBox="0 0 404 384"
-                aria-hidden="true"
-              >
+                aria-hidden="true">
                 <defs>
                   <pattern
                     id="de316486-4a29-4312-bdfc-fbce2132a2c1"
@@ -43,8 +44,7 @@ export default function () {
                     y={0}
                     width={20}
                     height={20}
-                    patternUnits="userSpaceOnUse"
-                  >
+                    patternUnits="userSpaceOnUse">
                     <rect
                       x={0}
                       y={0}

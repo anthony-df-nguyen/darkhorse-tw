@@ -49,6 +49,8 @@ export default function Home() {
         title="Darkhorse Advisor"
         text="Individualized financial planning and advisory."
         cta={true}
+        cta_text="Contact Us"
+        cta_href="/contact"
       />
       <div className="bg-gray-100 pad-tb">
         <Header
@@ -64,7 +66,7 @@ export default function Home() {
 
         <div className="max-w-7xl mx-auto sm:px-6 lg:px-8 pad-top">
           <div className="mx-auto text-center">
-            <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
+            <div className="grid grid-cols-1 gap-14 lg:gap-8 lg:grid-cols-3">
               {features.map((feature) => (
                 <div key={feature.name}>
                   <InfoCard
@@ -78,7 +80,8 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="pad-tb">
+      {/* Services */}
+      <div className="pad-tb" id="services">
         <Services />
       </div>
       {/* Testimonials */}

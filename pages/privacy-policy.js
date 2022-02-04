@@ -12,6 +12,8 @@ export default function PrivacyPolicy(props) {
         title="Privacy Policy"
         image="/images/privacy-policy.jpg"
         cta={true}
+        cta_text="Back Home"
+        cta_href="/"
       />
 
       <div className="relative pad-top bg-gray-100 overflow-hidden">

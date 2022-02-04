@@ -15,7 +15,7 @@ import {
 } from "@heroicons/react/outline";
 import { ChevronDownIcon } from "@heroicons/react/solid";
 import Link from "next/link";
-import Image from "next/image"
+import Image from "next/image";
 
 const navigation = [
   {
@@ -33,11 +33,11 @@ const navigation = [
     href: "/about",
     icon: UserIcon,
   },
-  {
-    name: "Contact",
-    href: "/contact",
-    icon: MailIcon,
-  },
+  // {
+  //   name: "Contact",
+  //   href: "/contact",
+  //   icon: MailIcon,
+  // },
 ];
 
 function classNames(...classes) {
@@ -73,7 +73,9 @@ export default function Navbar() {
                 <MenuIcon className="h-6 w-6" aria-hidden="true" />
               </Popover.Button>
             </div>
-            <Popover.Group as="nav" className="hidden md:flex space-x-10">
+            <Popover.Group
+              as="nav"
+              className="hidden md:flex items-center space-x-10">
               {navigation.map((item) => (
                 <Link key={item.name} href={item.href}>
                   <span className="text-base font-medium text-gray-700 hover:text-gray-900 cursor-pointer">
@@ -81,6 +83,11 @@ export default function Navbar() {
                   </span>
                 </Link>
               ))}
+              <Link href="/contact">
+                <div className="bg-accent hover-bg cursor-pointer rounded-md px-4 py-2 text-white">
+                  Contact Us
+                </div>
+              </Link>
             </Popover.Group>
           </div>
 
@@ -113,6 +120,7 @@ export default function Navbar() {
                         </span>
                       </span>
                     </Link>
+
                     <div className="-mr-2">
                       <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-teal-500">
                         <span className="sr-only">Close menu</span>
@@ -120,8 +128,10 @@ export default function Navbar() {
                       </Popover.Button>
                     </div>
                   </div>
+
                   <div className="mt-6">
-                    <nav className="grid grid-cols-1 gap-6">
+                    <hr></hr>
+                    <nav className="mt-6 grid grid-cols-1 gap-6">
                       {navigation.map((item) => (
                         <Link key={item.name} href={item.href}>
                           <span className="-m-3 p-3 flex items-center rounded-lg cursor-pointer">
@@ -137,6 +147,12 @@ export default function Navbar() {
                           </span>
                         </Link>
                       ))}
+                      <hr></hr>
+                      <Link href="/contact">
+                        <div className="cursor-pointer flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm bg-accent hover-bg text-white sm:px-8">
+                          Contact Us
+                        </div>
+                      </Link>
                     </nav>
                   </div>
                 </div>
