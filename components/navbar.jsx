@@ -15,6 +15,7 @@ import {
 } from "@heroicons/react/outline";
 import { ChevronDownIcon } from "@heroicons/react/solid";
 import Link from "next/link";
+import Image from "next/image"
 
 const navigation = [
   {
@@ -52,9 +53,11 @@ export default function Navbar() {
             <div className="flex justify-start lg:w-0 lg:flex-1 items-center">
               <Link href="/">
                 <span className="flex items-center cursor-pointer">
-                  <img
-                    className="inline h-10 w-auto bg-gray-800 p-1 rounded-md"
-                    src="images/horse.svg"
+                  <Image
+                    src="/images/horse.svg"
+                    layout="fixed"
+                    height={36}
+                    width={36}
                     alt="horse-icon"
                   />
                   <span className="ml-4 text-2xl text-dark font-extrabold">
@@ -88,23 +91,23 @@ export default function Navbar() {
             enterTo="opacity-100 scale-100"
             leave="duration-100 ease-in"
             leaveFrom="opacity-100 scale-100"
-            leaveTo="opacity-0 scale-95"
-          >
+            leaveTo="opacity-0 scale-95">
             <Popover.Panel
               focus
-              className="absolute z-30 top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden"
-            >
+              className="absolute z-30 top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden">
               <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50">
                 <div className="pt-5 pb-6 px-5">
                   <div className="flex items-center justify-between">
                     <Link href="/">
                       <span className="flex items-center cursor-pointer">
-                        <img
-                          className="inline h-10 w-auto bg-gray-800 p-1 rounded-md"
-                          src="images/horse.svg"
+                        <Image
+                          src="/images/horse.svg"
+                          layout="fixed"
+                          height={36}
+                          width={36}
                           alt="horse-icon"
                         />
-                        <span className="ml-4 text-xl text-dark font-extrabold ">
+                        <span className="ml-4 text-2xl text-dark font-extrabold">
                           Darkhorse
                           <span className="text-accent"> Advisor</span>
                         </span>
