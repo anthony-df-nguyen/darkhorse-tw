@@ -47,7 +47,7 @@ export default function Home() {
       <Hero
         image="/images/method.jpg"
         title="Darkhorse Advisor"
-        text="Individualized financial planning and advisory."
+        text="Individualized financial planning and advice"
         cta={true}
         cta_text="Contact Us"
         cta_href="/contact"

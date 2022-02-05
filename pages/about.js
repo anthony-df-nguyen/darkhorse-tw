@@ -4,6 +4,16 @@ import Header from "../components/header";
 import { CameraIcon } from "@heroicons/react/solid";
 
 export default function () {
+  const aboutMe = [
+    {
+      name: "Competitive Biking",
+      imageUrl: "/images/biking.jpg",
+    },
+    {
+      name: "Surfing",
+      imageUrl: "/images/surfing.jpg",
+    },
+  ];
   return (
     <Page title="About" description="Learn more about Alan.">
       <Hero
@@ -15,10 +25,11 @@ export default function () {
         text="Learn more about Alan Flores, Darkhorse Advisor."
       />
 
+      {/* Professional Experience */}
       <div className="bg-gray-100 pad-tb overflow-hidden">
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="hidden lg:block absolute top-0 bottom-0 left-3/4 w-screen" />
-          <div className="mx-auto text-base max-w-prose lg:grid lg:grid-cols-2 lg:gap-8 lg:max-w-none">
+          <div className="mx-auto text-base max-w-prose lg:grid lg:grid-cols-3 lg:gap-8 lg:max-w-none">
             <div>
               <h2 className="text-base text-accent font-semibold tracking-wide uppercase">
                 The Darkhorse Advisor
@@ -62,9 +73,9 @@ export default function () {
                 />
               </svg>
               <div className="relative text-base mx-auto max-w-prose lg:max-w-none">
-                <div className="aspect-w-6 aspect-h-7 lg:mx-auto">
+                <div className="aspect-w-4 aspect-h-4 lg:mx-auto">
                   <img
-                    className="rounded-lg shadow-lg object-cover object-center"
+                    className="rounded-lg shadow-lg object-cover object-top"
                     src="/images/alan.png"
                     alt="Portrait of Alan Flores"
                     width={1184}
@@ -94,13 +105,77 @@ export default function () {
                   Association; I was a member on the Board of Directors from
                   1997-2002.
                 </p>
-                <h3>More About Alan</h3>
-                <p>
-                  I live in Newport Beach with my wife Sandy, and sons Sean and
-                  Jack. I am passionate about living a very active lifestyle
-                  including gym workouts, beach runs, bike rides and surfing.
-                </p>
               </div>
+
+              <h2 className="mt-6 text-base text-accent font-semibold tracking-wide uppercase max-w-prose mx-auto">
+                Experience
+              </h2>
+              <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-6 leading-8 text-gray max-w-prose mx-auto">
+                <div>
+                  <div className="font-bold">Managing Partner</div>
+                  <div className="-mt-1">
+                    {" "}
+                    Clearview Investment Partners LLC
+                  </div>
+                  <div className="text-xs">May 2009 - Present</div>
+                </div>
+                <div>
+                  <div className="font-bold">Vice President - Investments</div>
+                  <div className="-mt-1">UBS Wealth Management</div>
+                  <div className="text-xs">June 2002 - May 2009</div>
+                </div>
+                <div>
+                  <div className="font-bold">Vice President - Investments</div>
+                  <div className="-mt-1">A.G. Edwards</div>
+                  <div className="text-xs">June 1997 - June 2002</div>
+                </div>
+                <div>
+                  <div className="font-bold">Financial Consultant</div>
+                  <div className="-mt-1">Smith Barney</div>
+                  <div className="text-xs">October 1993 - June 1997</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Personal Section */}
+      <div className="bg-white">
+        <div className="mx-auto py-12 px-4 max-w-7xl sm:px-6 lg:px-8 lg:py-24">
+          <div className="space-y-12 lg:grid lg:grid-cols-3 lg:gap-8 lg:space-y-0">
+            <div className="space-y-5 sm:space-y-4">
+              <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl text-accent">
+                About Me
+              </h2>
+              <p className="text-lg text-gray-500">
+                I live in Newport Beach with my wife, Sandy, and my sons, Sean
+                and Jack. I am passionate about living a very active lifestyle
+                which includes working out at gym, running along the beach,
+                riding my bikes, and surfing.
+              </p>
+            </div>
+            <div className="lg:col-span-2">
+              <ul
+                role="list"
+                className="space-y-12 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 sm:space-y-0 lg:gap-x-8">
+                {aboutMe.map((person, i) => (
+                  <li key={i}>
+                    <div className="space-y-4">
+                      <div className="aspect-w-3 aspect-h-2">
+                        <img
+                          className="object-cover shadow-lg rounded-lg"
+                          src={person.imageUrl}
+                          alt=""
+                        />
+                      </div>
+                      {/* <div className="text-lg leading-6 font-medium space-y-1">
+                        <h3>{person.name}</h3>
+                      </div> */}
+                    </div>
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
         </div>
