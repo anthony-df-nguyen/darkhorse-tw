@@ -16,7 +16,7 @@ export default function InfoCard(props) {
         </h3>
 
         {props.href ? (
-          <p className="mt-6 text-base  leading-8 text-gray hover-text">
+          <p className="mt-4 text-base  leading-8 text-gray hover-text">
             <a className="underline" href={props.href}>
               {props.description}
             </a>

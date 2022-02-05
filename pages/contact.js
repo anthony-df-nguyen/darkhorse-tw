@@ -20,8 +20,8 @@ export default function Contact() {
     },
     {
       method: "LinkedIn",
-      value: "LinkedIn",
-      href: "https://www.linkedin.com/company/darkhorseadvisor/about/",
+      value: "/darkhorseadvisor",
+      href: "https://www.linkedin.com/company/darkhorseadvisor/",
       icon: <AiFillLinkedin></AiFillLinkedin>,
     },
   ];
