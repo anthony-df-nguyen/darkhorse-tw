@@ -26,16 +26,19 @@ const navigation = {
       name: "Email",
       href: "mailto:alan@darkhorseadvisor.com",
       icon: AiFillMail,
+      event: "clicked_email",
     },
     {
       name: "Phone",
       href: "tel:714-394-0243",
       icon: AiFillPhone,
+      event: "clicked_phone",
     },
     {
       name: "LinkedIn",
       href: "https://www.linkedin.com/company/darkhorseadvisor/about/",
       icon: AiFillLinkedin,
+      event: "clicked_linkedin",
     },
   ],
 };
@@ -46,8 +49,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <nav
           className="-mx-5 -my-2 flex flex-wrap justify-center"
-          aria-label="Footer"
-        >
+          aria-label="Footer">
           {navigation.main.map((item) => (
             <div key={item.name} className="px-5 py-2">
               <span className="text-base text-gray-500 hover:text-gray-900">
@@ -58,7 +60,10 @@ export default function Footer() {
         </nav>
         <div className="mt-6 flex justify-center space-x-6">
           {navigation.social.map((item) => (
-            <a key={item.name} href={item.href}>
+            <a
+              key={item.name}
+              href={item.href}
+            >
               <span className="sr-only text-gray hover-text">{item.name}</span>
               {/* <img className="h-10 w-10" src={item.icon} /> */}
               <span className="text-2xl text-accent hover-text">
