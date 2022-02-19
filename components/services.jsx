@@ -121,10 +121,10 @@ export default function Services() {
             {servicesGridOne.map((service) => (
               <div key={service.title} className="p-5 bg-gray-100 ">
                 <div className="relative">
-                  <h3 className="text-sm font-semibold text-dark text-center ">
+                  <div className="text-sm font-semibold text-dark text-center ">
                     <span className="absolute inset-0" aria-hidden="true" />
                     {service.title}
-                  </h3>
+                  </div>
                 </div>
               </div>
             ))}

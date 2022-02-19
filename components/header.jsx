@@ -9,9 +9,9 @@ export default function Header(props) {
         <p className="mt-1 text-2xl font-extrabold text-dark sm:text-2xl sm:tracking-tight lg:text-4xl">
           {props.title}
         </p>
-        <p className="text-left max-w-3xl pt-4 mx-auto text-base lg:text-lg text-gray leading-8">
+        <div className="text-left max-w-3xl pt-4 mx-auto text-base lg:text-lg text-gray leading-8">
           {props.children}
-        </p>
+        </div>
       </div>
     </div>
   );
