@@ -29,7 +29,7 @@ export default function () {
       <div className="bg-gray-100 pad-tb overflow-hidden">
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="hidden lg:block absolute top-0 bottom-0 left-3/4 w-screen" />
-          <div className="mx-auto text-base max-w-prose lg:grid lg:grid-cols-3 lg:gap-8 lg:max-w-none">
+          <div className="mx-auto text-base lg:grid lg:grid-cols-3 lg:gap-8 lg:max-w-none">
             <div>
               <h2 className="text-base text-accent font-semibold tracking-wide uppercase">
                 The Darkhorse Advisor
@@ -39,10 +39,11 @@ export default function () {
               </h3>
             </div>
           </div>
-          <div className="mt-6 lg:grid lg:grid-cols-2 lg:gap-8">
-            <div className="relative lg:row-start-1 lg:col-start-2">
+          {/* Picture and Text */}
+          <div className="mt-6 md:grid md:grid-cols-2 md:gap-8">
+            <div className="relative md:row-start-1 md:col-start-2">
               <svg
-                className="hidden lg:block absolute top-0 right-0 -mt-20 -mr-20"
+                className="hidden md:block absolute top-0 right-0 -mt-20 -mr-20"
                 width={404}
                 height={384}
                 fill="none"
@@ -72,8 +73,8 @@ export default function () {
                   fill="url(#de316486-4a29-4312-bdfc-fbce2132a2c1)"
                 />
               </svg>
-              <div className="relative text-base mx-auto max-w-prose lg:max-w-none">
-                <div className="aspect-w-4 aspect-h-4 lg:mx-auto">
+              <div className="relative text-base mx-auto  md:max-w-none">
+                <div className="aspect-w-4 aspect-h-4 md:mx-auto">
                   <img
                     className="rounded-lg shadow-lg object-cover object-top"
                     src="/images/alan.png"
@@ -84,8 +85,8 @@ export default function () {
                 </div>
               </div>
             </div>
-            <div className="mt-6 lg:mt-0 leading-8 text-gray">
-              <div className="max-w-prose mx-auto lg:max-w-none">
+            <div className="mt-6 md:mt-0 leading-8 text-gray">
+              <div className=" mx-auto md:max-w-none">
                 <p>
                   I have worked as a Financial Consultant since 1993. I was a
                   Managing Partner at Clearview, an Independent fee-only
@@ -94,7 +95,7 @@ export default function () {
                   Edwards, and Smith Barney.
                 </p>
               </div>
-              <div className="mt-5 prose prose-indigo mx-auto lg:max-w-none lg:row-start-1 lg:col-start-1 leading-8 text-gray">
+              <div className="mt-5 mx-auto md:max-w-none md:row-start-1 md:col-start-1 leading-8 text-gray">
                 <p>
                   I earned my Bachelor of Arts Degree in political science from
                   the University of California, Irvine.
@@ -107,10 +108,10 @@ export default function () {
                 </p>
               </div>
 
-              <h2 className="mt-6 text-base text-accent font-semibold tracking-wide uppercase max-w-prose mx-auto">
+              <h2 className="mt-6 text-base text-accent font-semibold tracking-wide uppercase mx-auto">
                 Experience
               </h2>
-              <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-6 leading-8 text-gray max-w-prose mx-auto">
+              <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-6 leading-8 text-gray  mx-auto">
                 <div>
                   <div className="font-bold">Managing Partner</div>
                   <div className="-mt-1">
