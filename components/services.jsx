@@ -133,11 +133,11 @@ export default function Services() {
             <a
               href="/pdf-files/darkhorse-adv.pdf"
               download="darkhorse-adv"
-              className="text-accent font-semibold underline flex flex-row items-center gap-2 justify-center ">
+              className="text-accent font-semibold underline flex flex-row items-center gap-1 justify-center ">
               <div className="">
                 <IoMdDownload />
               </div>
-              <div> Download the Darkhorse Advisor ADV Form</div>
+              <div>Darkhorse Advisor ADV Form</div>
             </a>
           </div>
         </Header>

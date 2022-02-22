@@ -42,12 +42,11 @@ export default function Home() {
   return (
     <Page
       title="Darkhorse Advisor"
-      description="Individualized financial planning and advice."
-    >
+      description="Darkhorse Advisor. Individualized Wealth Management">
       <Hero
         image="/images/method.jpg"
         title="Darkhorse Advisor"
-        text="Individualized financial planning and advice"
+        text="Individualized Wealth Management"
         cta={true}
         cta_text="Contact Us"
         cta_href="/contact"
@@ -55,8 +54,7 @@ export default function Home() {
       <div className="bg-gray-100 pad-tb">
         <Header
           subtitle="Three Core Tenets"
-          title="Research. Service. Integrity."
-        >
+          title="Research. Service. Integrity.">
           Darkhorse Advisor LLC. is an independent financial advisory firm
           located in Newport Beach, California. Founded by Alan Flores, a
           registered investment advisor with 27 years of financial portfolio
@@ -91,23 +89,20 @@ export default function Home() {
         <Testimonial
           name="Carlos and Mercedes Carchi"
           title="Sr. Network Manager, Belkin International"
-          side="left"
-        >
+          side="left">
           {`"Over the past 13 years, Alan has provided us a framework of a thorough planning process and ongoing quarterly portfolio reviews that has helped us make informed decisions about our money, and with a steady hand, guided us through the good times and bad ones"`}
         </Testimonial>
 
         <Testimonial
           name="Dr. Brad and Kathy de Marquette"
           title="Emergency Physician, Kaiser Permanante"
-          side="right"
-        >
+          side="right">
           {`"Alan has carefully listened and has tailor-made a thoughtful financial plan that matches our comfort level and our long-term wishes for our family. We are confident with his asset management process that allows us the freedom to focus on the other things"`}
         </Testimonial>
         <Testimonial
           name="Dr. Janet K. Ruffing, RSM"
           title="Yale University"
-          side="left"
-        >
+          side="left">
           {`"You are a true scholar in your research efforts and your personal investment guidance"`}
         </Testimonial>
       </div>
