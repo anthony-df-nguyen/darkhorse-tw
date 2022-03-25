@@ -12,8 +12,10 @@ export default function csvreader(props) {
     reader.onload = function (e) {
       const text = e.target.result;
       const initialParse = Papa.parse(text);
-      console.log("initialParse: ", initialParse);
-      const validRows = initialParse.data.filter((row) => row[2] && row);
+      console.log("initialParse: ", initialParse.data);
+      //Only return rows with an account number - column 3
+      const validRows = initialParse.data.filter((row) => row[3] && row);
+      //Save the parsed csvData as jsonstring to localstorage
       localStorage.setItem("savedCSVData", JSON.stringify(validRows));
       props.updateUploadDisplay(false);
     };

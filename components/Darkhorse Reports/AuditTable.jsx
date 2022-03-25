@@ -1,39 +1,17 @@
 /* This example requires Tailwind CSS v2.0+ */
 import { useState, useEffect } from "react";
-import Csvreader from "./CSVUpload";
-// import CsvDownloader from "react-csv-downloader";
 
 export default function Table(props) {
-  const [savedData, updateSavedData] = useState([]);
+  const savedData = props.savedData;
+  const [numberOfRandom, updateNumRandom] = useState(0); 
   const [data, updateData] = useState([]);
-  // const [exportData, updateExportData] = useState([]);
-
-  const [numberOfRandom, updateNumRandom] = useState(0);
   const columns = ["Row #", "Name", "Account", "Calculated Qtrly Fee"];
-  const [uploadDisplay, updateUploadDisplay] = useState(false);
-  const [clearDisplay, updateClearDisplay] = useState(true);
 
-  // Check if a csv file has already been saved to localstorage
-  useEffect(() => {
-    if (localStorage.getItem("savedCSVData")) {
-      const savedData = localStorage.getItem("savedCSVData");
-      const jsonData = JSON.parse(savedData);
-      updateSavedData(jsonData.slice(1, jsonData.length + 1));
-      updateUploadDisplay(false);
-      updateClearDisplay(true);
-    }
-    // If no file was uploaded, show the button to upload a file
-    else {
-      updateUploadDisplay(true);
-      updateClearDisplay(false);
-    }
-  }, [uploadDisplay]);
-
-  //When savedJSON data is finished loading from local storage, set savedData to CSV file
+  //When savedJSON data is finished loading from local storage on the parent component, update the displayed data
   useEffect(() => {
     updateData(savedData);
     updateNumRandom(Math.ceil(savedData.length * 0.25));
-  }, [savedData]);
+  }, [props.savedData]);
 
   // Show the full list of accounts again
   const showFullList = () => {
@@ -51,30 +29,9 @@ export default function Table(props) {
     updateData(limitedRandomArray);
   };
 
-  //Build CSV format when data changes
-  // useEffect(() => {
-  //   const arr = [];
-  //   console.log("Running buildExport");
-  //   data.forEach((row) => {
-  //     console.log(row)
-  //     arr.push({
-  //       "Account Description": row[0],
-  //       "Account #": row[2],
-  //       "Fee": row[11].replace("$",""),
-  //     });
-  //   });
-  //   //console.log("arr", arr);
-  //   updateExportData(arr);
-  // }, [data]);
-
   return (
-    <div className="px-4 sm:px-6 lg:px-8">
-      {/* Only Show the Upload file button if there is none loaded */}
-      {uploadDisplay && (
-        <div className="my-4">
-          <Csvreader updateUploadDisplay={updateUploadDisplay} />
-        </div>
-      )}
+    <div className="bg-gray-50 py-8 px-4 rounded-lg mt-4">
+      {/* Header */}
       <div className="sm:flex sm:items-center">
         <div className="sm:flex-auto">
           <h1 className="text-xl font-semibold text-gray-900">
@@ -108,33 +65,14 @@ export default function Table(props) {
             Random 25%
           </button>
         </div>
-        {/* Only Show the Clear Local Storage Button if there is Saved CSV Data already */}
-        <div className="mt-4 sm:mt-0 sm:ml-4 sm:flex-none">
-          {clearDisplay && (
-            <button
-              onClick={() => {
-                confirm("Are you sure you wish to clear out the CSV file?") &&
-                  localStorage.removeItem("savedCSVData");
-                updateSavedData([]);
-                updateData([]);
-                updateUploadDisplay(true);
-                updateClearDisplay(false);
-              }}
-              type="button"
-              className="inline-flex items-center justify-center rounded-md border border-transparent bg-red-500 px-4 py-2 text-sm font-medium text-white shadow-sm  focus:outline-none focus:ring-2 focus:ring-offset-2 sm:w-auto">
-              Clear Loaded Data
-            </button>
-          )}
-        </div>
       </div>
-      {/* CSV Download of whats shown on table */}
-
+      {/* Table */}
       <div className="mt-8 flex flex-col">
         <div className="-my-2 -mx-4 overflow-x-auto sm:-mx-6 lg:-mx-8">
           <div className="inline-block min-w-full py-2 align-middle md:px-6 lg:px-8">
             <div className="overflow-hidden shadow ring-1 ring-black ring-opacity-5 md:rounded-lg">
               <table className="min-w-full divide-y divide-gray-300">
-                <thead className="bg-gray-50">
+                <thead className="bg-accent">
                   <tr>
                     {columns.map((col) => (
                       <th
@@ -153,13 +91,13 @@ export default function Table(props) {
                         {i + 1}
                       </td>
                       <td className="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-6">
-                        {data[0]}
+                        {data[1]}
                       </td>
                       <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
-                        {data[2]}
+                        {data[3]}
                       </td>
                       <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
-                        {data[11].replace("$", "")}
+                        {data[12].replace("$", "")}
                       </td>
                     </tr>
                   ))}
