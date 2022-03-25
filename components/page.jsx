@@ -19,7 +19,7 @@ export default function Page(props) {
           content="invest, portfolio, advisor, services, alan, flores, finanicial, consultant, business planning, investment, insurance, retirement, education, estate planning, tax, cash flow"></meta>
         {/* Global site tag (gtag.js) - Google Analytics */}
       </Head>
-      <Script
+      {/* <Script
         src="https://www.googletagmanager.com/gtag/js?id=G-TZRBTHL4P9"
         strategy="afterInteractive"
       />
@@ -30,7 +30,7 @@ export default function Page(props) {
           gtag('js', new Date());
           gtag('config', 'G-TZRBTHL4P9',{'debug_mode':false,});
         `}
-      </Script>
+      </Script> */}
       <header>
         <nav>
           <Navbar />
