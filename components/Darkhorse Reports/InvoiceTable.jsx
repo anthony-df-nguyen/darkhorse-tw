@@ -1,12 +1,14 @@
 import { useState, useEffect, useRef } from "react";
 import { MdOpenInNew } from "react-icons/md";
 import HouseholdReport from "./HouseholdReport";
+import toCurrency from '../../utilities/toCurrency'
 
 export default function InvoiceTable(props) {
   const savedData = props.savedData;
 
   const [households, updateHouseholds] = useState([]);
   const [householdData,updateHouseholdData] = useState([])
+  const [modalDisplay,updateModalDisplay] = useState("none")
 
   const householdColumns = [
     "Row",
@@ -20,6 +22,7 @@ export default function InvoiceTable(props) {
   useEffect(() => {
     let uniqueHouseholds = [];
     savedData.forEach((row, i) => {
+      console.log(row)
       //Determines if uniqueHouseholds already has an entry for the househould
       const exists =
         uniqueHouseholds.filter((e) => e.household === row[0]).length >= 1
@@ -36,7 +39,7 @@ export default function InvoiceTable(props) {
               type: row[2],
               number: row[3],
               value: parseFloat(row[6].replace(/[^0-9.-]+/g, ""), 2),
-              rate: row[9],
+              rate: parseFloat(row[11],2),
               quarterly_fee: parseFloat(row[12].replace(/[^0-9.-]+/g, ""), 2),
             },
           ],
@@ -55,7 +58,7 @@ export default function InvoiceTable(props) {
           type: row[2],
           number: row[3],
           value: parseFloat(row[6].replace(/[^0-9.-]+/g, ""), 2),
-          rate: row[9],
+          rate: parseFloat(row[11],2),
           quarterly_fee: parseFloat(row[12].replace(/[^0-9.-]+/g, ""), 2),
         });
       }
@@ -64,18 +67,12 @@ export default function InvoiceTable(props) {
     updateHouseholds(uniqueHouseholds);
   }, [savedData]);
 
-  const toCurrency = (val) => {
-    //console.log(val)
-    const formatter = new Intl.NumberFormat("en-us", {
-      style: "currency",
-      currency: "USD",
-    });
-    return isNaN(val) ? "Error" : formatter.format(val);
-  };
+
 
   const load = (i) => {
     console.log(`You clicked index ${i}`);
     updateHouseholdData(households[i])
+    updateModalDisplay('block');
   };
 
   return (
@@ -96,7 +93,16 @@ export default function InvoiceTable(props) {
       </div>
 
       {/* Household Report */}
-      <HouseholdReport data={householdData} />
+      <div style={{ display: modalDisplay }}>
+        <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 h-full w-full blackdrop">
+          <div className="relative top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-lg w-min overflow-hidden">
+            <HouseholdReport
+              data={householdData}
+              updateModal={updateModalDisplay}
+            />
+          </div>
+        </div>
+      </div>
       {/* Table */}
       <div className="mt-8 flex flex-col">
         <div className="-my-2 -mx-4 overflow-x-auto sm:-mx-6 lg:-mx-8">
@@ -148,7 +154,7 @@ export default function InvoiceTable(props) {
                           onClick={() => {
                             load(i);
                           }}>
-                          {<MdOpenInNew className="w-6 h-6 cursor-pointer"  />}
+                          {<MdOpenInNew className="w-6 h-6 cursor-pointer" />}
                         </div>
                       </td>
                     </tr>

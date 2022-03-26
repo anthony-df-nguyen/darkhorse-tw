@@ -90,3 +90,7 @@ a {
   //Set base pad-top-bottom value for mobile
   @include pad-tb(16);
 }
+
+.blackdrop {
+  background-color: rgba(0, 0, 0, 0.70);
+}
