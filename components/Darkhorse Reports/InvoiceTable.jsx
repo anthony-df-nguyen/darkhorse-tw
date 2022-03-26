@@ -72,6 +72,7 @@ export default function InvoiceTable(props) {
 
 
   const load = (i) => {
+    console.log('This should set household to ',households[i].household)
     updateHouseholdData(households[i])
     updateModalDisplay('block');
   };
@@ -97,11 +98,14 @@ export default function InvoiceTable(props) {
       <div style={{ display: modalDisplay }}>
         <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 h-full w-full blackdrop">
           <div className="relative top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-lg w-min overflow-hidden min-w-[700px]">
-            <HouseholdReport
-              data={householdData}
-              updateModal={updateModalDisplay}
-              asOf={props.asOf}
-            />
+            {
+              <HouseholdReport
+                data={householdData}
+                updateHousehould={updateHouseholdData}
+                updateModal={updateModalDisplay}
+                asOf={props.asOf}
+              />
+            }
           </div>
         </div>
       </div>

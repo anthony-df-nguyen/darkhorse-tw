@@ -17,7 +17,6 @@ export default function () {
   useEffect(() => {
     if (localStorage.getItem("savedCSVData")) {
       const data = getRequiredFields()
-      console.log('data: ', data);
       updateSavedData(data.data);
       updateUploadDisplay(false);
       updateClearDisplay(true);

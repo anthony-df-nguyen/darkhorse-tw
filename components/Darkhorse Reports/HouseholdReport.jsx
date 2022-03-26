@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import toCurrency from "../../utilities/toCurrency";
-import Pdf from "react-to-pdf";
+import { PDFDownloadLink, PDFViewer } from "@react-pdf/renderer";
+import InvoicePDF from "../Darkhorse Reports/PDFTable/InvoicePDF";
 
 export default function HouseholdReport(props) {
   const [data, updateData] = useState([]);
@@ -13,38 +14,35 @@ export default function HouseholdReport(props) {
     "Quarterly Fee ($)",
   ];
 
-  //PDF
-  const ref = React.createRef();
-
   useEffect(() => {
     updateData(props.data);
+    console.log('Household is now ', props.data.household)
   }, [props]);
+
   return (
     <div className="bg-white px-4 py-5 border-b border-gray-200 sm:px-6">
       {/* PDF Buttons */}
       {data.household && (
         <div className="flex items-center justify-end flex-wrap sm:flex-nowrap">
           <div className="flex-shrink-0">
-            <Pdf
-              targetRef={ref}
-              filename={`${data.household.replace(/[^a-zA-Z0-9]/g, "")}_quarterly_invoice_${
-                props.asOf
-              }`}
-              x={18}
-              y={18}
-              scale={0.9}>
-              {({ toPdf }) => (
-                <button
-                  onClick={toPdf}
-                  type="button"
-                  className="relative inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-accent hover-bg ">
-                  Download Invoice
-                </button>
-              )}
-            </Pdf>
-
             <button
-              onClick={() => props.updateModal("none")}
+              type="button"
+              className="relative inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-accent hover-bg ">
+              <PDFDownloadLink
+                fileName={`${data.household.replace(/[^a-zA-Z0-9]/g, "")}_${
+                  props.asOf
+                }.pdf`}
+                document={<InvoicePDF data={data} asOf={props.asOf} />}>
+                Download Invoice
+              </PDFDownloadLink>
+            </button>
+          </div>
+          <div className="flex-shrink-0">
+            <button
+              onClick={() => {
+                props.updateHousehould([])
+                props.updateModal("none");
+              }}
               type="button"
               className="ml-4 relative inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-gray-500 hover:bg-gray-600">
               Close Window
@@ -53,8 +51,13 @@ export default function HouseholdReport(props) {
         </div>
       )}
 
-      {/* PDF ready table */}
-      <div ref={ref}>
+      {/* {data.household && (
+        <PDFViewer height={400} width={800} showToolbar={false}>
+          <InvoicePDF data={data} asOf={props.asOf} />
+        </PDFViewer>
+      )} */}
+      {/* Web Table */}
+      <div>
         <div className="-mt-9 flex justify-between items-center flex-wrap sm:flex-nowrap">
           <span className="flex items-center cursor-pointer">
             <img
