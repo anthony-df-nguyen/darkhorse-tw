@@ -35,7 +35,7 @@ export default function Table(props) {
       <div className="sm:flex sm:items-center">
         <div className="sm:flex-auto">
           <h1 className="text-xl font-semibold text-gray-900">
-            Darkhorse Advisor Accounts and Fee List
+            Darkhorse Advisor Accounts and Fee List as of {props.asOf}
           </h1>
           <p className="mt-2 text-sm text-gray-700">
             Show the full list of accounts and fees, or randomly generate a list
@@ -91,13 +91,13 @@ export default function Table(props) {
                         {i + 1}
                       </td>
                       <td className="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-6">
-                        {data[1]}
+                        {data.account_desc}
                       </td>
                       <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
-                        {data[3]}
+                        {data.account}
                       </td>
                       <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
-                        {data[12].replace("$", "")}
+                        {data.account_value.replace("$", "")}
                       </td>
                     </tr>
                   ))}

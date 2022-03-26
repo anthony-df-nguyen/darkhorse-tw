@@ -4,7 +4,7 @@ const toCurrency = (val) => {
       style: "currency",
       currency: "USD",
     });
-    return isNaN(val) ? "Error" : formatter.format(val);
+    return isNaN(val) ? "Error: Number is wrong format" : formatter.format(val);
   };
 
 export default toCurrency

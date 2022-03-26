@@ -10,6 +10,7 @@
   "dependencies": {
     "@headlessui/react": "^1.4.3",
     "@heroicons/react": "^1.0.5",
+    "@react-pdf/renderer": "^2.1.1",
     "@tailwindcss/aspect-ratio": "^0.4.0",
     "@tailwindcss/typography": "^0.5.1",
     "next": "^12.0.8",
@@ -17,7 +18,8 @@
     "react": "17.0.2",
     "react-csv-downloader": "^2.7.1",
     "react-dom": "17.0.2",
-    "react-icons": "^4.3.1"
+    "react-icons": "^4.3.1",
+    "react-to-pdf": "^0.0.14"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.2",

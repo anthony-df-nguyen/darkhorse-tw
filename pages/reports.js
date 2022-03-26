@@ -3,23 +3,25 @@ import { useState, useEffect } from "react";
 import Csvreader from "../components/Darkhorse Reports/CSVUpload";
 import AuditTable from "../components/Darkhorse Reports/AuditTable";
 import InvoiceTable from "../components/Darkhorse Reports/InvoiceTable";
+import getRequiredFields from "../utilities/getRequiredFields";
 
 export default function () {
   const [uploadDisplay, updateUploadDisplay] = useState(false);
   const [clearDisplay, updateClearDisplay] = useState(true);
   const [savedData, updateSavedData] = useState([]);
-
+  const [asOf,updateAsOf] = useState("")
   //Which table to show, depending on toggled mode
   const [table, updateTable] = useState(true);
 
   // Check if a csv file has already been saved to localstorage
   useEffect(() => {
     if (localStorage.getItem("savedCSVData")) {
-      const getDataFromStorage = localStorage.getItem("savedCSVData");
-      const jsonData = JSON.parse(getDataFromStorage);
-      updateSavedData(jsonData.slice(1, jsonData.length + 1));
+      const data = getRequiredFields()
+      console.log('data: ', data);
+      updateSavedData(data.data);
       updateUploadDisplay(false);
       updateClearDisplay(true);
+      updateAsOf(data.asOf);
     }
     // If no file was uploaded, show the button to upload a file
     else {
@@ -31,7 +33,7 @@ export default function () {
 
   return (
     <Page title="Reports" description="">
-      <div className="max-w-7xl mx-auto sm:px-6 lg:px-8 pad-top">
+      <div className="max-w-7xl mx-auto sm:px-6 lg:px-8">
         {/* Only Show the Upload file button if there is none loaded */}
         {uploadDisplay && (
           <div className="my-4">
@@ -39,7 +41,7 @@ export default function () {
           </div>
         )}
         {/* Only Show the Clear Local Storage Button if there is Saved CSV Data already */}
-        <div className="mt-4 sm:mt-0 sm:flex-none">
+        <div className="sm:mt-0 sm:flex-none">
           {clearDisplay && (
             <div className="flex flex-row items-center gap-4">
               <div className="text-xl font-bold">Mode</div>
@@ -78,8 +80,8 @@ export default function () {
             </div>
           )}
         </div>
-        {table && <AuditTable savedData={savedData} />}
-        {!table && <InvoiceTable savedData={savedData} />}
+        {table && <AuditTable savedData={savedData} asOf={asOf} />}
+        {!table && <InvoiceTable savedData={savedData} asOf={asOf} />}
       </div>
     </Page>
   );

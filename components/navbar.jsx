@@ -16,6 +16,7 @@ import {
 import { ChevronDownIcon } from "@heroicons/react/solid";
 import Link from "next/link";
 import Image from "next/image";
+import DHLogo from '../components/dh_logo'
 
 const navigation = [
   {
@@ -52,19 +53,7 @@ export default function Navbar() {
           <div className="flex justify-between items-center max-w-7xl mx-auto px-4 py-6 sm:px-6 md:space-x-10 lg:px-8">
             <div className="flex justify-start lg:w-0 lg:flex-1 items-center">
               <Link href="/">
-                <span className="flex items-center cursor-pointer">
-                  <Image
-                    src="/images/horse.svg"
-                    layout="fixed"
-                    height={36}
-                    width={36}
-                    alt="horse-icon"
-                  />
-                  <span className="ml-4 text-2xl text-dark font-extrabold">
-                    Darkhorse
-                    <span className="text-accent"> Advisor</span>
-                  </span>
-                </span>
+                <DHLogo />
               </Link>
             </div>
             <div className="-mr-2 -my-2 md:hidden">

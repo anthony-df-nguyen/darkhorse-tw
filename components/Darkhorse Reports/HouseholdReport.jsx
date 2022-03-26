@@ -1,45 +1,86 @@
-import React, {useState,useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import toCurrency from "../../utilities/toCurrency";
+import Pdf from "react-to-pdf";
 
 export default function HouseholdReport(props) {
-  const [data,updateData] = useState([])
-  console.log("data: ", data);
+  const [data, updateData] = useState([]);
   const householdColumns = [
     "Account Description",
     "Account Type",
-    "Account Value",
-    "Actual Fee %",
-    "Annual Fee",
-    "Quarterly Fee",
-    // "Quarterly Fee (Math Check)",
+    `Account Value as of ${props.asOf}`,
+    "Annual Fee (%)",
+    "Annual Fee ($)",
+    "Quarterly Fee ($)",
   ];
-  useEffect(()=>{
-    updateData(props.data)
-  },[props])
+
+  //PDF
+  const ref = React.createRef();
+
+  useEffect(() => {
+    updateData(props.data);
+  }, [props]);
   return (
     <div className="bg-white px-4 py-5 border-b border-gray-200 sm:px-6">
-      <div className="-ml-4 -mt-4 flex justify-between items-center flex-wrap sm:flex-nowrap">
-        <div className="ml-4 my-4">
-          <h3 className="text-2xl leading-6 font-bold text-gray-900">
-            Household
+      {/* PDF Buttons */}
+      {data.household && (
+        <div className="flex items-center justify-end flex-wrap sm:flex-nowrap">
+          <div className="flex-shrink-0">
+            <Pdf
+              targetRef={ref}
+              filename={`${data.household.replace(/[^a-zA-Z0-9]/g, "")}_quarterly_invoice_${
+                props.asOf
+              }`}
+              x={18}
+              y={18}
+              scale={0.9}>
+              {({ toPdf }) => (
+                <button
+                  onClick={toPdf}
+                  type="button"
+                  className="relative inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-accent hover-bg ">
+                  Download Invoice
+                </button>
+              )}
+            </Pdf>
+
+            <button
+              onClick={() => props.updateModal("none")}
+              type="button"
+              className="ml-4 relative inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-gray-500 hover:bg-gray-600">
+              Close Window
+            </button>
+          </div>
+        </div>
+      )}
+
+      {/* PDF ready table */}
+      <div ref={ref}>
+        <div className="-mt-9 flex justify-between items-center flex-wrap sm:flex-nowrap">
+          <span className="flex items-center cursor-pointer">
+            <img
+              src="/images/horse.png"
+              layout="fixed"
+              height={36}
+              width={36}
+              alt="horse-icon"
+            />
+            <span className="ml-4 text-2xl text-dark font-extrabold">
+              Darkhorse
+              <span className="text-accent"> Advisor</span>
+            </span>
+          </span>
+        </div>
+        <div className="mt-12 mb-4">
+          <h3 className="text-2xl leading-6 font-bold text-accent">
+            Quarterly Invoice
           </h3>
+        </div>
+
+        <div className="mb-4">
+          <h3 className="text-xl leading-6 font-bold ">Household Group</h3>
           <p className="mt-1 text-lg text-gray-500">{data.household}</p>
         </div>
-        <div className="ml-4 mt-4 flex-shrink-0">
-          <button
-            type="button"
-            className="relative inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-accent hover-bg ">
-            Download Invoice
-          </button>
-          <button
-            onClick={() => props.updateModal("none")}
-            type="button"
-            className="ml-4 relative inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-gray-500 hover:bg-gray-600">
-            Close Window
-          </button>
-        </div>
-      </div>
-      <div>
+
         <table className="min-w-full divide-y divide-gray-300 rounded-lg overflow-hidden">
           <thead className="bg-accent">
             <tr>
@@ -47,7 +88,7 @@ export default function HouseholdReport(props) {
                 <th
                   scope="col"
                   key={col}
-                  className="py-3.5 px-2 text-left text-sm font-semibold text-gray-900 ">
+                  className="py-3.5 px-2 text-left text-sm font-semibold text-white ">
                   {col}
                 </th>
               ))}
@@ -56,66 +97,71 @@ export default function HouseholdReport(props) {
           <tbody className="divide-y divide-gray-200 bg-white" id="tableBody">
             {data.accounts &&
               data.accounts.map((row, i) => {
-                const annualFee = row.value * parseFloat(row.rate / 100);
-                const quarterFee = annualFee / 4;
                 return (
                   <tr key={i} className="bg-gray-50 ">
                     <td className="whitespace-nowrap py-4 px-2 text-sm font-medium text-gray-900">
-                      {row.name}
+                      {row.account}
                     </td>
                     <td className="whitespace-nowrap py-4 px-2 text-sm font-medium text-gray-900">
-                      {row.type}
+                      {row.account_type}
                     </td>
                     <td className="whitespace-nowrap py-4 px-2 text-sm font-medium text-gray-900">
-                      {toCurrency(row.value)}
+                      {toCurrency(row.account_value)}
                     </td>
                     <td className="whitespace-nowrap py-4 px-2 text-sm font-medium text-gray-900">
-                      {row.rate}%
+                      {row.account_fee}%
                     </td>
                     <td className="whitespace-nowrap py-4 px-2 text-sm font-medium text-gray-900">
-                      {toCurrency(annualFee)}
+                      {toCurrency(row.annual_fee)}
                     </td>
                     <td className="whitespace-nowrap py-4 px-2 text-sm font-medium text-gray-900">
-                      {toCurrency(row.quarterly_fee)}
+                      {toCurrency(row.quarter_fee)}
                     </td>
-                    {/* <td className="whitespace-nowrap ppx-2pr-3 text-sm font-medium text-gray-900">
-                      {toCurrency(quarterFee)}
-                    </td> */}
                   </tr>
                 );
               })}
             <tr>
-              <td
-                colSpan={2}
-                className="whitespace-nowrap py-4 px-2 text-sm font-medium text-gray-900 bg-gray-200 text-right">
+              <td className="whitespace-nowrap py-4 px-2 text-sm font-bold text-gray-900 bg-gray-200"></td>
+              <td className="whitespace-nowrap py-4 px-2 text-sm font-bold text-gray-900 bg-gray-200 text-right">
                 Total
               </td>
-              <td className="whitespace-nowrap py-4 px-2 text-sm font-medium text-gray-900 bg-gray-200">
-                {data.accounts &&
-                  toCurrency(
-                    data.accounts.map((a) => a.value).reduce((a, b) => a + b, 0)
-                  )}
-              </td>
-              <td className="whitespace-nowrap py-4 px-2 text-sm font-medium text-gray-900 bg-gray-200"></td>
-              <td className="whitespace-nowrap py-4 px-2 text-sm font-medium text-gray-900 bg-gray-200">
+              <td className="whitespace-nowrap py-4 px-2 text-sm font-bold text-gray-900 bg-gray-200">
                 {data.accounts &&
                   toCurrency(
                     data.accounts
-                      .map((a) => a.value * parseFloat(a.rate / 100))
+                      .map((a) => a.account_value)
                       .reduce((a, b) => a + b, 0)
                   )}
               </td>
-              <td className="whitespace-nowrap py-4 px-2 text-sm font-medium text-gray-900 bg-gray-200">
+              <td className="whitespace-nowrap py-4 px-2 text-sm font-bold text-gray-900 bg-gray-200"></td>
+              <td className="whitespace-nowrap py-4 px-2 text-sm font-bold text-gray-900 bg-gray-200">
                 {data.accounts &&
                   toCurrency(
                     data.accounts
-                      .map((a) => a.quarterly_fee)
+                      .map(
+                        (a) => a.account_value * parseFloat(a.account_fee / 100)
+                      )
+                      .reduce((a, b) => a + b, 0)
+                  )}
+              </td>
+              <td className="whitespace-nowrap py-4 px-2 text-sm font-bold text-gray-900 bg-gray-200">
+                {data.accounts &&
+                  toCurrency(
+                    data.accounts
+                      .map((a) => a.quarter_fee)
                       .reduce((a, b) => a + b, 0)
                   )}
               </td>
             </tr>
           </tbody>
         </table>
+        <div className="mt-4 text-xs">
+          Disclosure: *The annual fee is charged quarterly based on the market
+          value as of the last quarter end date. The calculation for the
+          quarterly fee is based on the annual fee % multiplied by the account
+          value divided into 4 quarters ((<em>annual fee %</em> *{" "}
+          <em>account value</em>) / 4)
+        </div>
       </div>
     </div>
   );
