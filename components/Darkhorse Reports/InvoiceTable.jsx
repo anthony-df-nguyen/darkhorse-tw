@@ -1,12 +1,13 @@
 import { useState, useEffect, useRef } from "react";
-import { BsChevronRight } from "react-icons/bs";
+import { MdOpenInNew } from "react-icons/md";
+import HouseholdReport from "./HouseholdReport";
 
 export default function InvoiceTable(props) {
   const savedData = props.savedData;
 
   const [households, updateHouseholds] = useState([]);
+  const [householdData,updateHouseholdData] = useState([])
 
-  const [data, updateData] = useState([]);
   const householdColumns = [
     "Row",
     "Household",
@@ -74,15 +75,7 @@ export default function InvoiceTable(props) {
 
   const load = (i) => {
     console.log(`You clicked index ${i}`);
-    const detailAccount = households[i].accounts.map((row) => {
-      return {
-        account: row.name,
-        type: row.type,
-        value: row.value,
-        quarterly_fee: row.quarterly_fee,
-        detailed: true,
-      };
-    });
+    updateHouseholdData(households[i])
   };
 
   return (
@@ -101,6 +94,9 @@ export default function InvoiceTable(props) {
           </p>
         </div>
       </div>
+
+      {/* Household Report */}
+      <HouseholdReport data={householdData} />
       {/* Table */}
       <div className="mt-8 flex flex-col">
         <div className="-my-2 -mx-4 overflow-x-auto sm:-mx-6 lg:-mx-8">
@@ -152,7 +148,7 @@ export default function InvoiceTable(props) {
                           onClick={() => {
                             load(i);
                           }}>
-                          {<BsChevronRight />}
+                          {<MdOpenInNew className="w-6 h-6 cursor-pointer"  />}
                         </div>
                       </td>
                     </tr>
