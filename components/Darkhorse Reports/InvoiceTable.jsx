@@ -83,7 +83,7 @@ export default function InvoiceTable(props) {
       <div className="sm:flex sm:items-center">
         <div className="sm:flex-auto">
           <h1 className="text-xl font-semibold text-gray-900">
-            Darkhorse Advisor Invoice Reports as of {props.asOf}
+            Household Group Invoice Reports as of {props.asOf}
           </h1>
           <p className="mt-2 text-sm text-gray-700">
             Shows unique household groups of Darkhorse Advisor
@@ -121,7 +121,7 @@ export default function InvoiceTable(props) {
                       <th
                         scope="col"
                         key={col}
-                        className="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-6">
+                        className="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-white sm:pl-6">
                         {col}
                       </th>
                     ))}

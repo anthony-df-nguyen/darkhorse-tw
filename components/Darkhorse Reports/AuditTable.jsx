@@ -5,7 +5,8 @@ export default function Table(props) {
   const savedData = props.savedData;
   const [numberOfRandom, updateNumRandom] = useState(0); 
   const [data, updateData] = useState([]);
-  const columns = ["Row #", "Name", "Account", "Calculated Qtrly Fee"];
+  console.log('data: ', data);
+  const columns = ["Row #", "Name", "Account", `Account Value as of ${props.asOf}`];
 
   //When savedJSON data is finished loading from local storage on the parent component, update the displayed data
   useEffect(() => {
@@ -35,7 +36,7 @@ export default function Table(props) {
       <div className="sm:flex sm:items-center">
         <div className="sm:flex-auto">
           <h1 className="text-xl font-semibold text-gray-900">
-            Darkhorse Advisor Accounts and Fee List as of {props.asOf}
+            Account Value Audit List as of {props.asOf}
           </h1>
           <p className="mt-2 text-sm text-gray-700">
             Show the full list of accounts and fees, or randomly generate a list
@@ -78,7 +79,7 @@ export default function Table(props) {
                       <th
                         scope="col"
                         key={col}
-                        className="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-6">
+                        className="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-white sm:pl-6">
                         {col}
                       </th>
                     ))}
