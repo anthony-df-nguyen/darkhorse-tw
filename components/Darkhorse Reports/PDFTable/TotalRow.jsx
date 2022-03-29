@@ -18,7 +18,7 @@ export default function TotalRow({ data, width, cellPad, cellBorder }) {
     "",
     toCurrency(
       data
-        .map((a) => a.account_value * parseFloat(a.account_fee / 100))
+        .map((a) => a.annual_fee)
         .reduce((a, b) => a + b, 0)
     ),
     toCurrency(data.map((a) => a.quarter_fee).reduce((a, b) => a + b, 0)),

@@ -5,8 +5,8 @@ export default function Table(props) {
   const savedData = props.savedData;
   const [numberOfRandom, updateNumRandom] = useState(0); 
   const [data, updateData] = useState([]);
-  console.log('data: ', data);
-  const columns = ["Row #", "Name", "Account", `Account Value as of ${props.asOf}`];
+  //console.log('data: ', data);
+  const columns = ["Row #", "Name", "Account", `Account Fee`];
 
   //When savedJSON data is finished loading from local storage on the parent component, update the displayed data
   useEffect(() => {
@@ -98,7 +98,7 @@ export default function Table(props) {
                         {data.account}
                       </td>
                       <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
-                        {data.account_value.replace("$", "")}
+                        {data.quarter_fee.replace("$", "")}
                       </td>
                     </tr>
                   ))}

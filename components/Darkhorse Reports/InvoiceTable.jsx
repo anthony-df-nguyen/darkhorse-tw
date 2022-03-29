@@ -72,7 +72,7 @@ export default function InvoiceTable(props) {
 
 
   const load = (i) => {
-    console.log('This should set household to ',households[i].household)
+    //console.log('This should set household to ',households[i].household)
     updateHouseholdData(households[i])
     updateModalDisplay('block');
   };

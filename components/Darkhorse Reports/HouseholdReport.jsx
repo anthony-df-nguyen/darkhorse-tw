@@ -5,6 +5,7 @@ import InvoicePDF from "../Darkhorse Reports/PDFTable/InvoicePDF";
 
 export default function HouseholdReport(props) {
   const [data, updateData] = useState([]);
+  //console.log('data: ', data);
   const householdColumns = [
     "Account Description",
     "Account Type",
@@ -16,7 +17,7 @@ export default function HouseholdReport(props) {
 
   useEffect(() => {
     updateData(props.data);
-    console.log('Household is now ', props.data.household)
+    //console.log('Household is now ', props.data.household)
   }, [props]);
 
   return (
@@ -29,7 +30,7 @@ export default function HouseholdReport(props) {
               type="button"
               className="relative inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-accent hover-bg ">
               <PDFDownloadLink
-                fileName={`${data.household.replace(/[^a-zA-Z0-9]/g, "")}_${
+                fileName={`${data.household.replace(/[^a-zA-Z0-9]/g, "")}_invoice_${
                   props.asOf
                 }.pdf`}
                 document={<InvoicePDF data={data} asOf={props.asOf} />}>
@@ -51,11 +52,11 @@ export default function HouseholdReport(props) {
         </div>
       )}
 
-      {/* {data.household && (
+      {data.household && (
         <PDFViewer height={400} width={800} showToolbar={false}>
           <InvoicePDF data={data} asOf={props.asOf} />
         </PDFViewer>
-      )} */}
+      )}
       {/* Web Table */}
       <div>
         <div className="-mt-9 flex justify-between items-center flex-wrap sm:flex-nowrap">
@@ -142,7 +143,9 @@ export default function HouseholdReport(props) {
                   toCurrency(
                     data.accounts
                       .map(
-                        (a) => a.account_value * parseFloat(a.account_fee / 100)
+                        (a) => {
+                          return a.annual_fee
+                        }
                       )
                       .reduce((a, b) => a + b, 0)
                   )}
