@@ -52,11 +52,11 @@ export default function HouseholdReport(props) {
         </div>
       )}
 
-      {data.household && (
+      {/* {data.household && (
         <PDFViewer height={400} width={800} showToolbar={false}>
           <InvoicePDF data={data} asOf={props.asOf} />
         </PDFViewer>
-      )}
+      )} */}
       {/* Web Table */}
       <div>
         <div className="-mt-9 flex justify-between items-center flex-wrap sm:flex-nowrap">
