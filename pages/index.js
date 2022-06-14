@@ -83,7 +83,7 @@ export default function Home() {
         <Services />
       </div>
       {/* Testimonials */}
-      <div className="pad-top bg-gray-50">
+      {/* <div className="pad-top bg-gray-50">
         <Header subtitle="Darkhorse Advisor" title="Testimonials" />
 
         <Testimonial
@@ -105,7 +105,7 @@ export default function Home() {
           side="left">
           {`"You are a true scholar in your research efforts and your personal investment guidance"`}
         </Testimonial>
-      </div>
+      </div> */}
     </Page>
   );
 }
