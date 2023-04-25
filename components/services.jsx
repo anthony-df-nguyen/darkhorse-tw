@@ -1,5 +1,6 @@
 import Header from "./header";
-import { IoMdDownload } from "react-icons/io";
+import Download_file from "./download_file";
+
 
 export default function Services() {
   const servicesGridOne = [
@@ -129,16 +130,17 @@ export default function Services() {
               </div>
             ))}
           </div>
-          <div className="text-center mt-6 md:mt-12">
-            <a
+          <div className="text-center mt-6 md:mt-12 md:flex gap-4 justify-center">
+            <Download_file
               href="/pdf-files/darkhorse-adv.pdf"
-              download="darkhorse-adv"
-              className="text-accent font-semibold underline flex flex-row items-center gap-1 justify-center ">
-              <div className="">
-                <IoMdDownload />
-              </div>
-              <div>Darkhorse Advisor ADV Form</div>
-            </a>
+              text="Darkhorse Advisor ADV Form"
+              downloadName="Darkhorse_Advisor_ADV"
+            />
+            <Download_file
+              href="/pdf-files/Form ADV Part 2A March 22, 2023.pdf"
+              text="ADV Form Part 2A"
+              downloadName="Form ADV Part 2A March 22, 2023.pdf"
+            />
           </div>
         </Header>
       </div>
