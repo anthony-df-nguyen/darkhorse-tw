@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Papa from "papaparse";
 
-export default function csvreader(props) {
+export default function csvreader({updateUploadDisplay,error}) {
   const [csvFile, setCsvFile] = useState();
 
   console.log("CSV File", csvFile);
@@ -17,7 +17,7 @@ export default function csvreader(props) {
       const validRows = initialParse.data.filter((row) => row[3] && row);
       //Save the parsed csvData as jsonstring to localstorage
       localStorage.setItem("savedCSVData", JSON.stringify(validRows));
-      props.updateUploadDisplay(false);
+      updateUploadDisplay(false);
     };
 
     reader.readAsText(file);
@@ -46,6 +46,23 @@ export default function csvreader(props) {
           </div>
         </div>
       </form>
+      {error && (
+        <div className="mt-4 bg-red-500 p-2 rounded shadow text-white text-center">
+          <p>
+            There was an error generating a report for file you attached. Please
+            make sure you are uploading the correct CSV file for the quarterly
+            billing spreadsheet, or that the format of the spreadsheet adheres
+            to the rules.
+          </p>
+          <br></br>
+          <a
+            className="italic underline"
+            href="emailto:anthonydfnguyen@gmail.com"
+          >
+            Email me if you have any issues
+          </a>
+        </div>
+      )}
     </div>
   );
 }
