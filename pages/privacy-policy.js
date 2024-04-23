@@ -143,7 +143,7 @@ export default function PrivacyPolicy(props) {
               will manage their financial affairs expertly and confidentially.
             </p>
             <p>
-              Darkhorse Advisor, LLC (Hereafter "Darkhorse Advisor, LLC collects
+              Darkhorse Advisor, LLC (Hereafter &quot;Darkhorse Advisor&quot;, LLC collects
               personal, private information from its clients in order to
               determine the client&apos;s specific investment goals and
               objectives, which will assist in determining how to adequately
@@ -197,7 +197,7 @@ export default function PrivacyPolicy(props) {
               information provided to you related to your Darkhorse Advisor,
               LLC’s account, and notify Darkhorse Advisor, LLC promptly on the
               discovery of erroneous information at: Alan@Darkhorseadvisor.com.
-              "Darkhorse Advisor" respond to a comment/request to correct
+              &quot;Darkhorse Advisor&quot; respond to a comment/request to correct
               inaccurate information immediately.
             </p>
             <h2 className="mt-16 mb-2 font-bold text-lg text-base">

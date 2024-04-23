@@ -51,6 +51,7 @@ const InvoicePDF = (props) => {
           <Image
             src="/images/horse.png"
             style={{ width: "36pt", height: "36pt" }}
+            alt="Darkhorse Advisor Logo"
           />
           <Text
             style={{

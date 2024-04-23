@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Papa from "papaparse";
 
-export default function csvreader({updateUploadDisplay,error}) {
+export default function CSVReader({updateUploadDisplay,error}) {
   const [csvFile, setCsvFile] = useState();
 
   console.log("CSV File", csvFile);

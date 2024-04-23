@@ -12,7 +12,7 @@ export default function Table(props) {
   useEffect(() => {
     updateData(savedData);
     updateNumRandom(Math.ceil(savedData.length * 0.25));
-  }, [props.savedData]);
+  }, [savedData]);
 
   // Show the full list of accounts again
   const showFullList = () => {

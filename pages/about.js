@@ -1,9 +1,8 @@
 import Page from "../components/page";
 import Hero from "../components/hero";
-import Header from "../components/header";
-import { CameraIcon } from "@heroicons/react/solid";
+import Image from "next/image"
 
-export default function () {
+export default function About() {
   const aboutMe = [
     {
       name: "Competitive Biking",
@@ -48,7 +47,8 @@ export default function () {
                 height={384}
                 fill="none"
                 viewBox="0 0 404 384"
-                aria-hidden="true">
+                aria-hidden="true"
+              >
                 <defs>
                   <pattern
                     id="de316486-4a29-4312-bdfc-fbce2132a2c1"
@@ -56,7 +56,8 @@ export default function () {
                     y={0}
                     width={20}
                     height={20}
-                    patternUnits="userSpaceOnUse">
+                    patternUnits="userSpaceOnUse"
+                  >
                     <rect
                       x={0}
                       y={0}
@@ -75,7 +76,7 @@ export default function () {
               </svg>
               <div className="relative text-base mx-auto  md:max-w-none">
                 <div className="aspect-w-4 aspect-h-4 md:mx-auto">
-                  <img
+                  <Image
                     className="rounded-lg shadow-lg object-cover object-top"
                     src="/images/alan.png"
                     alt="Portrait of Alan Flores"
@@ -159,12 +160,13 @@ export default function () {
             <div className="lg:col-span-2">
               <ul
                 role="list"
-                className="space-y-12 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 sm:space-y-0 lg:gap-x-8">
+                className="space-y-12 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 sm:space-y-0 lg:gap-x-8"
+              >
                 {aboutMe.map((person, i) => (
                   <li key={i}>
                     <div className="space-y-4">
                       <div className="aspect-w-3 aspect-h-2">
-                        <img
+                        <Image
                           className="object-cover shadow-lg rounded-lg"
                           src={person.imageUrl}
                           alt=""

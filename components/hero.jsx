@@ -15,6 +15,7 @@ export default function Hero(props) {
                 layout="fill"
                 quality={75}
                 priority={true}
+                alt="Darkhorse Advisor"
               />
             </div>
             <div className="absolute inset-0 bg-gray-200 mix-blend-multiply" />

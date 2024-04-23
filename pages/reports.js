@@ -5,7 +5,7 @@ import AuditTable from "../components/Darkhorse Reports/AuditTable";
 import InvoiceTable from "../components/Darkhorse Reports/InvoiceTable";
 import getRequiredFields from "../utilities/getRequiredFields";
 
-export default function () {
+export default function Reports () {
   const [uploadDisplay, updateUploadDisplay] = useState(false);
   const [clearDisplay, updateClearDisplay] = useState(true);
   const [savedData, updateSavedData] = useState([]);

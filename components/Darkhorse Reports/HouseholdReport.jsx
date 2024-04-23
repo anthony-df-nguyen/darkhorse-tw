@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Image from "next/image"
 import toCurrency from "../../utilities/toCurrency";
 import { PDFDownloadLink, PDFViewer } from "@react-pdf/renderer";
 import InvoicePDF from "../Darkhorse Reports/PDFTable/InvoicePDF";
@@ -61,7 +62,7 @@ export default function HouseholdReport(props) {
       <div>
         <div className="-mt-9 flex justify-between items-center flex-wrap sm:flex-nowrap">
           <span className="flex items-center cursor-pointer">
-            <img
+            <Image
               src="/images/horse.png"
               layout="fixed"
               height={36}
