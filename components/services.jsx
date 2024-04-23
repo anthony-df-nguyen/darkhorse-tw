@@ -132,14 +132,14 @@ export default function Services() {
           </div>
           <div className="text-center mt-6 md:mt-12 md:flex gap-4 justify-center">
             <Download_file
-              href="/pdf-files/darkhorse-adv.pdf"
-              text="Darkhorse Advisor ADV Form"
-              downloadName="Darkhorse_Advisor_ADV"
+              href="/pdf-files/Form ADV 3.20.2024.pdf"
+              text="Darkhorse Advisor Form ADV 3.20.2024"
+              downloadName="Form ADV 3.20.2024.pdf"
             />
             <Download_file
-              href="/pdf-files/Form ADV Part 2A March 22, 2023.pdf"
+              href="/pdf-files/Form ADV Part 2A March 19 2024.pdf"
               text="ADV Form Part 2A"
-              downloadName="Form ADV Part 2A March 22, 2023.pdf"
+              downloadName="Form ADV Part 2A March 19 2024.pdf"
             />
           </div>
         </Header>
