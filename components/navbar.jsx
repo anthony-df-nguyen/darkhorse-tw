@@ -15,7 +15,7 @@ import {
 } from "@heroicons/react/outline";
 import { ChevronDownIcon } from "@heroicons/react/solid";
 import Link from "next/link";
-import Image from "next/image";
+import Image from "next/legacy/image";
 
 
 const navigation = [

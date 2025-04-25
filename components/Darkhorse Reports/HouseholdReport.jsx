@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Image from "next/image"
+import Image from "next/legacy/image"
 import toCurrency from "../../utilities/toCurrency";
 import { PDFDownloadLink, PDFViewer } from "@react-pdf/renderer";
 import InvoicePDF from "../Darkhorse Reports/PDFTable/InvoicePDF";
@@ -52,7 +52,6 @@ export default function HouseholdReport(props) {
           </div>
         </div>
       )}
-
       {/* {data.household && (
         <PDFViewer height={400} width={800} showToolbar={false}>
           <InvoicePDF data={data} asOf={props.asOf} />
