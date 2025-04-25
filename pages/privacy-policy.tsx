@@ -1,8 +1,9 @@
+import React from "react";
 import Page from "../components/page";
 import Hero from "../components/hero";
 import DescriptionList from "../components/description-list";
 
-export default function PrivacyPolicy(props) {
+export default function PrivacyPolicy(props: any) {
   return (
     <Page
       title="Privacy Policy"
@@ -131,7 +132,7 @@ export default function PrivacyPolicy(props) {
               </span>
             </h1>
           </div>
-          <div className="prose prose-indigo prose-lg text-gray-500 mx-auto">
+          <div className="prose prose-indigo prose-lg  mx-auto">
             <h2 className="mt-16 mb-2 font-bold text-lg text-base">
               Client Information Privacy Principles
             </h2>

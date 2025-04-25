@@ -82,7 +82,7 @@ export default function HouseholdReport(props) {
 
         <div className="mb-4">
           <h3 className="text-xl leading-6 font-bold ">Household Group</h3>
-          <p className="mt-1 text-lg text-gray-500">{data.household}</p>
+          <p className="mt-1 text-lg ">{data.household}</p>
         </div>
 
         <table className="min-w-full divide-y divide-gray-300 rounded-lg overflow-hidden">

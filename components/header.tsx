@@ -1,5 +1,5 @@
-import InfoCard from "../components/info-card";
-export default function Header(props) {
+import InfoCard from "./info-card";
+export default function Header(props: any) {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="text-center">

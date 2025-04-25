@@ -150,7 +150,7 @@ export default function About() {
               <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl text-accent">
                 About Me
               </h2>
-              <p className="text-lg text-gray-500">
+              <p className="text-lg ">
                 I live in Newport Beach with my wife, Sandy, and my sons, Sean
                 and Jack. I am passionate about living a very active lifestyle
                 which includes working out at gym, running along the beach,

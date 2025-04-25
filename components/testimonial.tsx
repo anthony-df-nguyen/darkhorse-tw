@@ -1,6 +1,6 @@
 import { DotsHorizontalIcon } from "@heroicons/react/outline";
 
-export default function Recommendation(props) {
+export default function Recommendation(props: any) {
   function classNames(...classes) {
     return classes.filter(Boolean).join(" ");
   }

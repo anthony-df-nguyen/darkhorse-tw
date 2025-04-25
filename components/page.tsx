@@ -1,16 +1,16 @@
 import Head from "next/head";
-import Navbar from "../components/navbar";
-import Footer from "../components/footer";
+import Navbar from "./navbar";
+import Footer from "./footer";
 import Script from "next/script";
 
-export default function Page(props) {
+export default function Page(props: any) {
   return (
     <div>
       <Head>
         <title>{props.title}</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <link rel="icon" href="/favicon.ico" />
-        <meta type="description" content={props.description}></meta>
+        <meta content={props.description}></meta>
         <meta charSet="UTF-8"></meta>
         <meta name="author" content="Web Developer: Kenneth Kieu"></meta>
         {props.noindex && <meta name="robots" content="noindex"></meta>}

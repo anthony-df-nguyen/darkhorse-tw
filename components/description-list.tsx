@@ -1,4 +1,4 @@
-import { PaperClipIcon } from "@heroicons/react/solid";
+import React from "react";
 
 export default function DescriptionList() {
   return (
@@ -7,32 +7,32 @@ export default function DescriptionList() {
         <h3 className="text-lg my-3 leading-6 font-medium text-gray-900">
           Updates and Review
         </h3>
-        <p className="mt-1 max-w-2xl text-sm text-gray-500">
+        <p className="mt-1 max-w-2xl text-sm ">
           Firm Principal Attestation
         </p>
       </div>
       <div className="border-t border-gray-200 px-4 py-5 sm:p-0">
         <dl className="sm:divide-y sm:divide-gray-200">
           <div className="py-4 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-            <dt className="text-sm font-medium text-gray-500">Updated</dt>
+            <dt className="text-sm font-medium ">Updated</dt>
             <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
               07/02/2020
             </dd>
           </div>
           <div className="py-4 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-            <dt className="text-sm font-medium text-gray-500">Signed</dt>
+            <dt className="text-sm font-medium ">Signed</dt>
             <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
               Alan Flores
             </dd>
           </div>
           <div className="py-4 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-            <dt className="text-sm font-medium text-gray-500">Title</dt>
+            <dt className="text-sm font-medium ">Title</dt>
             <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
               Principal
             </dd>
           </div>
           <div className="py-4 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-            <dt className="text-sm font-medium text-gray-500">Date</dt>
+            <dt className="text-sm font-medium ">Date</dt>
             <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
               07/01/2020
             </dd>

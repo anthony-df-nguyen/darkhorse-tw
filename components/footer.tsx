@@ -52,7 +52,7 @@ export default function Footer() {
           aria-label="Footer">
           {navigation.main.map((item) => (
             <div key={item.name} className="px-5 py-2">
-              <span className="text-base text-gray-500 hover:text-gray-900">
+              <span className="text-base  hover:text-gray-900">
                 <Link href={item.href}>{item.name}</Link>
               </span>
             </div>

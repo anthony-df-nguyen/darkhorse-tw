@@ -22,7 +22,7 @@ export default function InfoCard(props) {
             </a>
           </p>
         ) : (
-          <p className="mt-6 text-base text-center leading-8 text-gray-500">
+          <p className="mt-6 text-base text-center leading-8 ">
             {props.description}
           </p>
         )}
