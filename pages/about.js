@@ -170,11 +170,9 @@ export default function About() {
                           className="object-cover shadow-lg rounded-lg"
                           src={person.imageUrl}
                           alt=""
+                          layout="fill"
                         />
                       </div>
-                      {/* <div className="text-lg leading-6 font-medium space-y-1">
-                        <h3>{person.name}</h3>
-                      </div> */}
                     </div>
                   </li>
                 ))}

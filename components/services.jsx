@@ -30,21 +30,6 @@ export default function Services() {
     },
   ];
 
-  // const servicesGridTwo = [
-  //   {
-  //     title: "Retirement",
-  //   },
-  //   {
-  //     title: "Education",
-  //   },
-  //   {
-  //     title: "Tax needs",
-  //   },
-  //   {
-  //     title: "Cash flow needs",
-  //   },
-  // ];
-
   return (
     <div className="relative overflow-hidden">
       <div className="hidden lg:block lg:absolute lg:inset-y-0 lg:h-full lg:w-full">
@@ -132,14 +117,14 @@ export default function Services() {
           </div>
           <div className="text-center mt-6 md:mt-12 md:flex gap-4 justify-center">
             <Download_file
-              href="/pdf-files/Form ADV 3.20.2024.pdf"
-              text="Darkhorse Advisor Form ADV 3.20.2024"
-              downloadName="Form ADV 3.20.2024.pdf"
+              href="/pdf-files/Form ADV 3.12.2025.pdf"
+              text="Darkhorse Advisor Form ADV 3.12.2025"
+              downloadName="Form ADV 3.12.2025.pdf"
             />
             <Download_file
-              href="/pdf-files/Form ADV Part 2A March 19 2024.pdf"
+              href="/pdf-files/Form ADV Part 2A 3.10.2025.pdf"
               text="ADV Form Part 2A"
-              downloadName="Form ADV Part 2A March 19 2024.pdf"
+              downloadName="Form ADV Part 2A 3.10.2025.pdf"
             />
           </div>
         </Header>
