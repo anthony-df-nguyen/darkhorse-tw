@@ -1,5 +1,11 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "./*"
+      ]
+    },
     "target": "es2020",
     "lib": [
       "dom",
@@ -29,7 +35,7 @@
     "**/*.tsx",
     "next-env.d.ts",
     ".next/types/**/*.ts"
-  ],
+, "app/reports/Darkhorse Reports/AuditTable/index.tss", "app/reports/Darkhorse Reports/PDFTable/InvoicePDF.tsx"  ],
   "exclude": [
     "node_modules"
   ]
