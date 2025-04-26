@@ -1,4 +1,4 @@
-import { AiFillLinkedin, AiFillMail, AiFillPhone } from "react-icons/ai";
+import { AiFillMail, AiFillPhone } from "react-icons/ai";
 
 type ContactSchema = {
   method: string;
@@ -19,11 +19,5 @@ export const contacts: ContactSchema[] = [
     value: "714-394-0243",
     href: "tel:714-394-0243",
     icon: <AiFillPhone></AiFillPhone>,
-  },
-  {
-    method: "LinkedIn",
-    value: "/darkhorseadvisor",
-    href: "https://www.linkedin.com/company/darkhorseadvisor/",
-    icon: <AiFillLinkedin></AiFillLinkedin>,
   },
 ];

@@ -4,7 +4,7 @@ import {
     QuestionMarkCircleIcon,
     UserIcon,
   } from "@heroicons/react/20/solid";
-  import { AiFillLinkedin, AiFillMail, AiFillPhone } from "react-icons/ai";
+  import { AiFillMail, AiFillPhone } from "react-icons/ai";
   import type { IconType } from "react-icons";
   
   type NavItem = {
@@ -53,12 +53,6 @@ import {
         href: "tel:714-394-0243",
         icon: AiFillPhone,
         event: "clicked_phone",
-      },
-      {
-        name: "LinkedIn",
-        href: "https://www.linkedin.com/company/darkhorseadvisor/about/",
-        icon: AiFillLinkedin,
-        event: "clicked_linkedin",
-      },
+      }
     ],
   };

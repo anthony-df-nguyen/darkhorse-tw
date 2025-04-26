@@ -32,7 +32,7 @@ export default function Contact() {
               subtitle="Darkhorse Advisor"
               title="Contact Me"
             ></IntroHeader>
-            <div className="pad-top grid grid-cols-1 gap-14 lg:gap-8 lg:grid-cols-3 pt-4 sm:pt-12">
+            <div className="pad-top grid grid-cols-1 gap-14 lg:gap-8 lg:grid-cols-2 pt-4 sm:pt-12">
               {contacts.map((contact) => {
                 return (
                   <div key={contact.method}>

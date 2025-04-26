@@ -4,11 +4,7 @@ export const aboutMe: AboutMeSchema[] = [
   {
     name: "Competitive Biking",
     imageUrl: "/images/biking.jpg",
-  },
-  {
-    name: "Surfing",
-    imageUrl: "/images/surfing.jpg",
-  },
+  }
 ];
 
 type ExperienceItem = {
@@ -18,6 +14,11 @@ type ExperienceItem = {
 };
 
 export const experienceTimeline: ExperienceItem[] = [
+  {
+    title: "Managing Director",
+    organization: "Darkhorse Advisor LLC",
+    date: "June 2020 – Present",
+  },
   {
     title: "Managing Partner",
     organization: "Clearview Investment Partners LLC",
