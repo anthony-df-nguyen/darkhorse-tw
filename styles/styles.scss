@@ -22,75 +22,50 @@ a {
   box-sizing: border-box;
 }
 
-//Darkhorse SVG Logo
-// .logoSVGColor {
-
-// }
-
-@mixin text-color($color, $value) {
-  @apply text-#{$color}-#{$value};
-}
-
-@mixin hover($color, $value) {
-  @apply hover:text-#{$color}-#{$value};
-}
-
-@mixin hover-bg($color, $value) {
-  @apply hover:bg-#{$color}-#{$value};
-}
-
-
-// Text
+// Text Color Utilities
 .text-gray {
-  @include text-color("gray", 500);
+  @apply text-gray-500;
+
   &.hover-text {
-    @include hover("gray", 900);
+    @apply hover:text-gray-900;
   }
 }
 
 .text-dark {
-  @include text-color("gray", 900);
+  @apply text-gray-900;
 }
 
 .text-accent {
-  @include text-color("teal", 500);
+  @apply text-teal-500;
+
   &.hover-text {
-    @include hover("teal", 600);
+    @apply hover:text-teal-600;
   }
 }
 
 .text-accent-dark {
-  @include text-color("teal", 600);
+  @apply text-teal-600;
 }
 
-//Background Color
+// Background Color
 .bg-accent {
-  @apply bg-teal-500;
-  @apply bg-opacity-95;
+  @apply bg-teal-500 bg-opacity-95;
+
   &.hover-bg {
-    @include hover-bg("teal", 600);
+    @apply hover:bg-teal-600;
   }
 }
 
 // Padding
-@mixin pad-top($value) {
-  @apply pt-#{$value} md:pt-#{$value + 8};
-}
-
-@mixin pad-tb($value) {
-  @apply py-#{$value} md:py-#{$value + 8};
-}
-
 .pad-top {
-  //Set base pad-top value for mobile
-  @include pad-top(16);
+  @apply pt-16 md:pt-24;
 }
 
 .pad-tb {
-  //Set base pad-top-bottom value for mobile
-  @include pad-tb(16);
+  @apply py-16 md:py-24;
 }
 
+// Utility Class for Dark Background Overlay
 .blackdrop {
-  background-color: rgba(0, 0, 0, 0.70);
+  background-color: rgba(0, 0, 0, 0.7);
 }
